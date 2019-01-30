@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/vinstarry/projects/osdesign/design1_2/main.c
+stdio.h
+-
+stdlib.h
+-
+sys/types.h
+-
+sys/stat.h
+-
+string.h
+-
+
