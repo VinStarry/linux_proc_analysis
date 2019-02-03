@@ -201,3 +201,31 @@ make[1]: Leaving directory '/home/vinstarry/projects/osdesign/design1_2/cmake-bu
     Feature record: C_FEATURE:0c_restrict
     Feature record: C_FEATURE:0c_static_assert
     Feature record: C_FEATURE:0c_variadic_macros
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/vinstarry/projects/osdesign/design1_2/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_0df5a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_0df5a.dir/build.make CMakeFiles/cmTC_0df5a.dir/build
+make[1]: Entering directory '/home/vinstarry/projects/osdesign/design1_2/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_0df5a.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -std=gnu11 -o CMakeFiles/cmTC_0df5a.dir/CheckIncludeFile.c.o   -c /home/vinstarry/projects/osdesign/design1_2/cmake-build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_0df5a
+/home/vinstarry/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/183.4886.39/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0df5a.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_0df5a.dir/CheckIncludeFile.c.o  -o cmTC_0df5a 
+make[1]: Leaving directory '/home/vinstarry/projects/osdesign/design1_2/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/vinstarry/projects/osdesign/design1_2/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_a510a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_a510a.dir/build.make CMakeFiles/cmTC_a510a.dir/build
+make[1]: Entering directory '/home/vinstarry/projects/osdesign/design1_2/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a510a.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -std=gnu11 -o CMakeFiles/cmTC_a510a.dir/CheckFunctionExists.c.o   -c /home/vinstarry/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/183.4886.39/bin/cmake/linux/share/cmake-3.13/Modules/CheckFunctionExists.c
+Linking C executable cmTC_a510a
+/home/vinstarry/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/183.4886.39/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a510a.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_a510a.dir/CheckFunctionExists.c.o  -o cmTC_a510a -lpthread 
+make[1]: Leaving directory '/home/vinstarry/projects/osdesign/design1_2/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+

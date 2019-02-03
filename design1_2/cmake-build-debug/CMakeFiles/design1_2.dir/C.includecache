@@ -15,6 +15,14 @@ sys/types.h
 -
 sys/stat.h
 -
+sys/ipc.h
+-
+sys/sem.h
+-
 string.h
+-
+pthread.h
+-
+stdbool.h
 -
 
