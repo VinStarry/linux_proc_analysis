@@ -17,6 +17,7 @@ void *thread3_func(void *arg);
 
 bool endSignal = TRUE;
 GtkWidget *date, *cpu, *sum;
+long all1 = 0, all2 = 0, idle1 = 0, idle2 = 0;
 
 int main(int argc, char *argv[]) {
     gtk_init(&argc, &argv);
@@ -89,16 +90,11 @@ gboolean destroy_handle(GtkWidget *self, GdkEvent *event, gpointer data) {
 
 void start_display(GtkWidget *self, GdkEvent *event, gpointer data) {
     endSignal = false;
-
     GThread *th1, *th2, *th3;
 
     th1 = g_thread_new ("a", thread1_func, NULL);
     th2 = g_thread_new ("b", thread2_func, NULL);
     th3 = g_thread_new ("c", thread3_func, NULL);
-
-    g_thread_join(th1);
-    g_thread_join(th2);
-    g_thread_join(th3);
 }
 
 void stop_display(GtkWidget *self, GdkEvent *event, gpointer data) {
@@ -106,9 +102,20 @@ void stop_display(GtkWidget *self, GdkEvent *event, gpointer data) {
 }
 
 void *thread1_func(void *arg) {
+    char buf[128] = {'\0'};
+    char cpu[5];
+    long int user,nice,sys,idle,iowait,irq,softirq;
+
     while (!endSignal) {
         sleep(1);
         gdk_threads_enter();
+        FILE * fp = fopen("/proc/stat","r");
+        fgets(buf,sizeof(buf),fp);
+        sscanf(buf,"%s%ld%ld%ld%ld%ld%ld%ld",cpu,&user,&nice,&sys,&idle,&iowait,&irq,&softirq);
+        all1 = user+nice+sys+idle+iowait+irq+softirq;
+        idle1 = idle;
+        fclose(fp);
+
         char *text = get_system_time();
         gtk_label_set_text(GTK_LABEL(date), text);
         gdk_threads_leave();
@@ -120,7 +127,7 @@ void *thread2_func(void *arg) {
     while (!endSignal) {
         sleep(2);
         gdk_threads_enter();
-        char *text = get_cpu_usager();
+        char *text = get_cpu_usager(all1, all2, idle1, idle2);
         gtk_label_set_text(GTK_LABEL(cpu), text);
         gdk_threads_leave();
     }

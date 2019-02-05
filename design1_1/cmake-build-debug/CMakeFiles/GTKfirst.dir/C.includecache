@@ -16,6 +16,10 @@ gtk/gtk.h
 window_functions.h
 /home/vinstarry/projects/osdesign/design1_1/window_functions.h
 
+/home/vinstarry/projects/osdesign/design1_1/window_functions.c
+window_functions.h
+/home/vinstarry/projects/osdesign/design1_1/window_functions.h
+
 /home/vinstarry/projects/osdesign/design1_1/window_functions.h
 unistd.h
 -

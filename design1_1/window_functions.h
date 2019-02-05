@@ -12,6 +12,6 @@
 
 char *get_system_time(void);
 char *get_adder_info(int *number, int *sum);
-char *get_cpu_usager(void);
+char *get_cpu_usager(long all1, long all2, long idle1, long idle2);
 
 #endif //GTKFIRST_WINDOW_FUNCTIONS_H
