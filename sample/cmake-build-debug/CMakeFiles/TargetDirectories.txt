@@ -1,0 +1,3 @@
+/home/vinstarry/projects/osdesign/sample/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/vinstarry/projects/osdesign/sample/cmake-build-debug/CMakeFiles/sample.dir
+/home/vinstarry/projects/osdesign/sample/cmake-build-debug/CMakeFiles/edit_cache.dir
