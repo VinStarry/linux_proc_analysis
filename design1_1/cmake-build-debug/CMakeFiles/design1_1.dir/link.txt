@@ -1,1 +1,0 @@
-/usr/bin/cc -g   CMakeFiles/design1_1.dir/main.c.o  -o design1_1 

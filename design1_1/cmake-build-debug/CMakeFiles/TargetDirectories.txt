@@ -1,3 +1,0 @@
-/home/vinstarry/projects/osdesign/design1_1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/vinstarry/projects/osdesign/design1_1/cmake-build-debug/CMakeFiles/GTKfirst.dir
-/home/vinstarry/projects/osdesign/design1_1/cmake-build-debug/CMakeFiles/edit_cache.dir
