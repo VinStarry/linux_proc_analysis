@@ -57,10 +57,10 @@ int main(int argc, char *argv[]) {
     char *opt = NULL;
     char *filename = NULL;
     struct stat s_buf;
-    if (argc < 3 || argc > 4) {
+    if (argc != 3) {
         perror("Invalid input!");
     }
-    else if (argc == 3) {
+    else {
         src = argv[1];
         dst = argv[2];
         stat(src, &s_buf);
@@ -84,11 +84,6 @@ int main(int argc, char *argv[]) {
                 return_state = DST_FILE_IS_NOT_DIR;
             }
         }
-    }
-    else {
-        opt = argv[1];
-        src = argv[2];
-        dst = argv[3];
     }
 
     error_catch(return_state);

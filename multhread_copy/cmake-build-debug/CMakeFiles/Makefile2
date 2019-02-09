@@ -59,10 +59,10 @@ RM = /home/vinstarry/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/183.4886.39/
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/vinstarry/projects/osdesign/design1_2
+CMAKE_SOURCE_DIR = /home/vinstarry/projects/osdesign/multhread_copy
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/vinstarry/projects/osdesign/design1_2/cmake-build-debug
+CMAKE_BINARY_DIR = /home/vinstarry/projects/osdesign/multhread_copy/cmake-build-debug
 
 #=============================================================================
 # Target rules for target CMakeFiles/design1_2.dir
@@ -71,7 +71,7 @@ CMAKE_BINARY_DIR = /home/vinstarry/projects/osdesign/design1_2/cmake-build-debug
 CMakeFiles/design1_2.dir/all:
 	$(MAKE) -f CMakeFiles/design1_2.dir/build.make CMakeFiles/design1_2.dir/depend
 	$(MAKE) -f CMakeFiles/design1_2.dir/build.make CMakeFiles/design1_2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vinstarry/projects/osdesign/design1_2/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target design1_2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vinstarry/projects/osdesign/multhread_copy/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target design1_2"
 .PHONY : CMakeFiles/design1_2.dir/all
 
 # Include target in all.
@@ -81,9 +81,9 @@ all: CMakeFiles/design1_2.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/design1_2.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vinstarry/projects/osdesign/design1_2/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vinstarry/projects/osdesign/multhread_copy/cmake-build-debug/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/design1_2.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vinstarry/projects/osdesign/design1_2/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vinstarry/projects/osdesign/multhread_copy/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/design1_2.dir/rule
 
 # Convenience name for target.
