@@ -12,143 +12,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a4e1fb92-7c90-421e-828a-afece1970cff" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../mulproc_display/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mulproc_display/window_proc.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mulproc_display/window_proc.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_1/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_1/.idea/design1_1.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_1/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_1/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_1/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_1/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_1/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_1/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_1/cmake-build-debug/CMakeCache.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_1/cmake-build-debug/CMakeFiles/3.13.2/CMakeCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_1/cmake-build-debug/CMakeFiles/3.13.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_1/cmake-build-debug/CMakeFiles/3.13.2/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_1/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_1/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdC/a.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_1/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_1/cmake-build-debug/CMakeFiles/CMakeError.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_1/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_1/cmake-build-debug/CMakeFiles/GTKfirst.dir/C.includecache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_1/cmake-build-debug/CMakeFiles/GTKfirst.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_1/cmake-build-debug/CMakeFiles/GTKfirst.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_1/cmake-build-debug/CMakeFiles/GTKfirst.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_1/cmake-build-debug/CMakeFiles/GTKfirst.dir/depend.internal" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_1/cmake-build-debug/CMakeFiles/GTKfirst.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_1/cmake-build-debug/CMakeFiles/GTKfirst.dir/flags.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_1/cmake-build-debug/CMakeFiles/GTKfirst.dir/link.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_1/cmake-build-debug/CMakeFiles/GTKfirst.dir/main.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_1/cmake-build-debug/CMakeFiles/GTKfirst.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_1/cmake-build-debug/CMakeFiles/GTKfirst.dir/window_functions.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_1/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_1/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_1/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_1/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_1/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_1/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_1/cmake-build-debug/CMakeFiles/design1_1.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_1/cmake-build-debug/CMakeFiles/design1_1.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_1/cmake-build-debug/CMakeFiles/design1_1.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_1/cmake-build-debug/CMakeFiles/design1_1.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_1/cmake-build-debug/CMakeFiles/design1_1.dir/flags.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_1/cmake-build-debug/CMakeFiles/design1_1.dir/link.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_1/cmake-build-debug/CMakeFiles/design1_1.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_1/cmake-build-debug/CMakeFiles/feature_tests.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_1/cmake-build-debug/CMakeFiles/feature_tests.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_1/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_1/cmake-build-debug/GTKfirst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_1/cmake-build-debug/GTKfirst.cbp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_1/cmake-build-debug/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_1/cmake-build-debug/cmake_install.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_1/cmake-build-debug/design1_1.cbp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_1/main.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_1/window_functions.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_1/window_functions.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_2/.idea/design1_2.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_2/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_2/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_2/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_2/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_2/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_2/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_2/cmake-build-debug/CMakeCache.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_2/cmake-build-debug/CMakeFiles/3.13.2/CMakeCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_2/cmake-build-debug/CMakeFiles/3.13.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_2/cmake-build-debug/CMakeFiles/3.13.2/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_2/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_2/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdC/a.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_2/cmake-build-debug/CMakeFiles/CMakeCache.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_2/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_2/cmake-build-debug/CMakeFiles/CMakeError.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_2/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_2/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_2/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_2/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_2/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_2/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_2/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_2/cmake-build-debug/CMakeFiles/cmake_install.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_2/cmake-build-debug/CMakeFiles/design1_2.dir/C.includecache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_2/cmake-build-debug/CMakeFiles/design1_2.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_2/cmake-build-debug/CMakeFiles/design1_2.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_2/cmake-build-debug/CMakeFiles/design1_2.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_2/cmake-build-debug/CMakeFiles/design1_2.dir/depend.internal" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_2/cmake-build-debug/CMakeFiles/design1_2.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_2/cmake-build-debug/CMakeFiles/design1_2.dir/flags.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_2/cmake-build-debug/CMakeFiles/design1_2.dir/link.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_2/cmake-build-debug/CMakeFiles/design1_2.dir/main.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_2/cmake-build-debug/CMakeFiles/design1_2.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_2/cmake-build-debug/CMakeFiles/feature_tests.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_2/cmake-build-debug/CMakeFiles/feature_tests.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_2/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_2/cmake-build-debug/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_2/cmake-build-debug/cmake_install.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_2/cmake-build-debug/design1_2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_2/cmake-build-debug/design1_2.cbp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../design1_2/main.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sample/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sample/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sample/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sample/.idea/sample.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sample/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sample/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sample/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sample/cmake-build-debug/CMakeCache.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sample/cmake-build-debug/CMakeFiles/3.13.2/CMakeCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sample/cmake-build-debug/CMakeFiles/3.13.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sample/cmake-build-debug/CMakeFiles/3.13.2/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sample/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sample/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdC/a.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sample/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sample/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sample/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sample/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sample/cmake-build-debug/CMakeFiles/Progress/1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sample/cmake-build-debug/CMakeFiles/Progress/count.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sample/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sample/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sample/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sample/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sample/cmake-build-debug/CMakeFiles/feature_tests.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sample/cmake-build-debug/CMakeFiles/feature_tests.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sample/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sample/cmake-build-debug/CMakeFiles/sample.dir/C.includecache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sample/cmake-build-debug/CMakeFiles/sample.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sample/cmake-build-debug/CMakeFiles/sample.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sample/cmake-build-debug/CMakeFiles/sample.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sample/cmake-build-debug/CMakeFiles/sample.dir/depend.internal" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sample/cmake-build-debug/CMakeFiles/sample.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sample/cmake-build-debug/CMakeFiles/sample.dir/flags.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sample/cmake-build-debug/CMakeFiles/sample.dir/link.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sample/cmake-build-debug/CMakeFiles/sample.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sample/cmake-build-debug/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sample/cmake-build-debug/cmake_install.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sample/cmake-build-debug/sample" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sample/cmake-build-debug/sample.cbp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sample/main.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proc_analysis/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../proc_analysis/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proc_analysis/cmake-build-debug/CMakeFiles/proc_analysis.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/../proc_analysis/cmake-build-debug/CMakeFiles/proc_analysis.dir/C.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proc_analysis/cmake-build-debug/CMakeFiles/proc_analysis.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/../proc_analysis/cmake-build-debug/CMakeFiles/proc_analysis.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proc_analysis/cmake-build-debug/CMakeFiles/proc_analysis.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../proc_analysis/cmake-build-debug/CMakeFiles/proc_analysis.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proc_analysis/cmake-build-debug/CMakeFiles/proc_analysis.dir/main.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/../proc_analysis/cmake-build-debug/CMakeFiles/proc_analysis.dir/main.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proc_analysis/cmake-build-debug/proc_analysis" beforeDir="false" afterPath="$PROJECT_DIR$/../proc_analysis/cmake-build-debug/proc_analysis" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proc_analysis/functions.c" beforeDir="false" afterPath="$PROJECT_DIR$/../proc_analysis/functions.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proc_analysis/functions.h" beforeDir="false" afterPath="$PROJECT_DIR$/../proc_analysis/functions.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proc_analysis/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/../proc_analysis/main.c" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -191,7 +63,7 @@
         <entry file="file://$PROJECT_DIR$/main.c">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="329">
-              <caret line="94" column="49" lean-forward="true" selection-start-line="94" selection-start-column="4" selection-end-line="94" selection-end-column="49" />
+              <caret line="94" column="49" selection-start-line="94" selection-start-column="4" selection-end-line="94" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -225,8 +97,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
       <pane id="Scope" />
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -278,16 +150,17 @@
       <workItem from="1549693357655" duration="32000" />
       <workItem from="1549700731661" duration="576000" />
       <workItem from="1549701418299" duration="2314000" />
+      <workItem from="1550036458102" duration="11000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24838000" />
+    <option name="totallyTimeSpent" value="24849000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="236" y="482" width="1934" height="1064" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28479657" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28961456" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -359,7 +232,7 @@
     <entry file="file://$PROJECT_DIR$/main.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="329">
-          <caret line="94" column="49" lean-forward="true" selection-start-line="94" selection-start-column="4" selection-end-line="94" selection-end-column="49" />
+          <caret line="94" column="49" selection-start-line="94" selection-start-column="4" selection-end-line="94" selection-end-column="49" />
         </state>
       </provider>
     </entry>

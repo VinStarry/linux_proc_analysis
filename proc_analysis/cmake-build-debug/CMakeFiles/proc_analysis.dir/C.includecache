@@ -6,11 +6,35 @@
 
 #IncludeRegexTransform: 
 
+/home/vinstarry/projects/osdesign/proc_analysis/functions.h
+gtk/gtk.h
+-
+stdio.h
+-
+unistd.h
+-
+sys/stat.h
+-
+string.h
+-
+stdlib.h
+-
+stdbool.h
+-
+sys/types.h
+-
+dirent.h
+-
+pwd.h
+-
+
 /home/vinstarry/projects/osdesign/proc_analysis/main.c
 stdio.h
 -
 gtk/gtk.h
 -
+functions.h
+/home/vinstarry/projects/osdesign/proc_analysis/functions.h
 
 /usr/include/atk-1.0/atk/atk-enum-types.h
 atk/atkversion.h
