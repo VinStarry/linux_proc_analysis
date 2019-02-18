@@ -6,16 +6,12 @@
 
 #IncludeRegexTransform: 
 
-/home/vinstarry/projects/osdesign/mulproc_display/window_proc.c
-window_proc.h
-/home/vinstarry/projects/osdesign/mulproc_display/window_proc.h
+/home/vinstarry/projects/osdesign/mulproc_display/table_op.c
+table_op.h
+/home/vinstarry/projects/osdesign/mulproc_display/table_op.h
 
-/home/vinstarry/projects/osdesign/mulproc_display/window_proc.h
+/home/vinstarry/projects/osdesign/mulproc_display/table_op.h
 gtk/gtk.h
--
-malloc.h
--
-stdbool.h
 -
 
 /usr/include/atk-1.0/atk/atk-enum-types.h

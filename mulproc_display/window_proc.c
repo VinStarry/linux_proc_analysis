@@ -7,8 +7,12 @@
 #define BUF_LEN 50
 #define WINDOW_WIDTH 400
 #define WINDOW_HEIGHT 200
+#define HUGE_WINDOW_WIDTH 800
+#define HUGE_WINDOW_HEIGHT 400
 #define BUTTON_WIDTH 200
 #define BUTTON_HEIGHT 50
+#define FSTAB_INFO_COL 6
+#define FSTAB_INFO_ROW 20
 
 typedef struct _re_data {
     GtkWidget *label;
@@ -20,13 +24,18 @@ GtkWidget *content = NULL;
 int proc_num = 0;
 long all1 = 0, all2 = 0, idle1 = 0, idle2 = 0;
 
+cross_linked_list *table_head = NULL;
+
 void wind_proc(int argc, char *argv[], int rank)
 {
     gtk_init(&argc, &argv);
     // main window
     GtkWidget *window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
 
-    gtk_widget_set_size_request(window, WINDOW_WIDTH, WINDOW_HEIGHT);
+    if (rank != 1)
+        gtk_widget_set_size_request(window, WINDOW_WIDTH, WINDOW_HEIGHT);
+    else
+        gtk_widget_set_size_request(window, HUGE_WINDOW_WIDTH, HUGE_WINDOW_HEIGHT);
     gtk_window_set_resizable(GTK_WINDOW(window), TRUE);
     gtk_window_set_position(GTK_WINDOW(window),GTK_WIN_POS_CENTER);
 
@@ -37,13 +46,31 @@ void wind_proc(int argc, char *argv[], int rank)
     // layouts
     GtkWidget *vbox = gtk_vbox_new(FALSE, 10);
     GtkWidget *button_box = gtk_hbox_new(FALSE, 0);
-    GtkWidget *label = gtk_label_new(title);
-    content = gtk_label_new("display here");
 
-    gtk_container_add(GTK_CONTAINER(window), vbox);
+    GtkWidget *label = gtk_label_new(title);
+
+
     gtk_box_pack_start(GTK_BOX(vbox), GTK_WIDGET(button_box), FALSE, FALSE, 0);
     gtk_box_pack_start(GTK_BOX(vbox), GTK_WIDGET(label), FALSE, FALSE, 0);
-    gtk_box_pack_start(GTK_BOX(vbox), GTK_WIDGET(content), FALSE, FALSE, 0);
+
+    if (rank != 1) {
+        content = gtk_label_new("display here");
+        gtk_box_pack_start(GTK_BOX(vbox), GTK_WIDGET(content), FALSE, FALSE, 0);
+    }
+    else {
+        GtkWidget *scrolled = gtk_scrolled_window_new(NULL,NULL);
+        gtk_container_add(GTK_CONTAINER(vbox),scrolled);
+        gtk_scrolled_window_set_policy(GTK_SCROLLED_WINDOW(scrolled), GTK_POLICY_AUTOMATIC, GTK_POLICY_ALWAYS);
+
+        table_head = (cross_linked_list *)malloc(sizeof(cross_linked_list));
+
+        GtkWidget* pHtable = gtk_table_new(FSTAB_INFO_ROW, FSTAB_INFO_COL, false);
+        gtk_scrolled_window_add_with_viewport (GTK_SCROLLED_WINDOW (scrolled), pHtable);
+
+        init_table(pHtable, table_head);
+    }
+
+    gtk_container_add(GTK_CONTAINER(window), vbox);
 
     // two butttons
     GtkWidget *start_button = gtk_button_new_with_label("Start");
@@ -79,7 +106,7 @@ char *title_name(int rank) {
             title = "System Time";
             break;
         case 1:
-            title = "CPU Usage";
+            title = "Fstab Info";
             break;
         case 2:
             title = "Adder";
@@ -104,33 +131,37 @@ char *get_system_time() {
 
 char *get_adder_info(int *number, int *sum) {
     char *adder_text = (char *)malloc(sizeof(char) * BUF_LEN);
-    sprintf(adder_text, "%d + %d = %d\n", *sum, *number, *sum + *number);
-    *sum = *sum + *number;
-    *number = *number + 1;
+    if (*number <= 1000) {
+        sprintf(adder_text, "%d + %d = %d\n", *sum, *number, *sum + *number);
+        *sum = *sum + *number;
+        *number = *number + 1;
+    }
+    else
+        sprintf(adder_text, "%d + %d = %d\n", *sum, *number, *sum + *number);
     return adder_text;
 }
 
-char *get_cpu_usager(long all1, long all2, long idle1, long idle2) {
-    char *usage_text = (char *)malloc(sizeof(char) * BUF_LEN);
-    float usage;
-
-    char buf[128] = {'\0'};
-    char cpu[5];
-    long int user,nice,sys,idle,iowait,irq,softirq;
-
-    FILE * fp = fopen("/proc/stat","r");
-    fgets(buf,sizeof(buf),fp);
-    sscanf(buf,"%s%ld%ld%ld%ld%ld%ld%ld",cpu,&user,&nice,&sys,&idle,&iowait,&irq,&softirq);
-
-    all2 = user+nice+sys+idle+iowait+irq+softirq;
-    idle2 = idle;
-    fclose(fp);
-
-    usage = (float)(all2-all1-(idle2-idle1)) / (all2-all1)*100 ;
-
-    sprintf(usage_text, "cpu usage = %.2f%%\n",usage);
-    return usage_text;
-}
+//char *get_cpu_usager(long all1, long all2, long idle1, long idle2) {
+//    char *usage_text = (char *)malloc(sizeof(char) * BUF_LEN);
+//    float usage;
+//
+//    char buf[128] = {'\0'};
+//    char cpu[5];
+//    long int user,nice,sys,idle,iowait,irq,softirq;
+//
+//    FILE * fp = fopen("/proc/stat","r");
+//    fgets(buf,sizeof(buf),fp);
+//    sscanf(buf,"%s%ld%ld%ld%ld%ld%ld%ld",cpu,&user,&nice,&sys,&idle,&iowait,&irq,&softirq);
+//
+//    all2 = user+nice+sys+idle+iowait+irq+softirq;
+//    idle2 = idle;
+//    fclose(fp);
+//
+//    usage = (float)(all2-all1-(idle2-idle1)) / (all2-all1)*100 ;
+//
+//    sprintf(usage_text, "cpu usage = %.2f%%\n",usage);
+//    return usage_text;
+//}
 
 void start_display(GtkWidget *self, GdkEvent *event, gpointer data) {
     endSignal = false;
@@ -167,20 +198,9 @@ void *thread_func1(void *arg) {
 void *thread_func2(void *arg) {
     while(!endSignal) {
         sleep(1);
-        char buf[128] = {'\0'};
-        char cpu[5];
-        long int user,nice,sys,idle,iowait,irq,softirq;
 
-        FILE * fp = fopen("/proc/stat","r");
-        fgets(buf,sizeof(buf),fp);
-        sscanf(buf,"%s%ld%ld%ld%ld%ld%ld%ld",cpu,&user,&nice,&sys,&idle,&iowait,&irq,&softirq);
-
-        all1 = user+nice+sys+idle+iowait+irq+softirq;
-        idle1 = idle;
-        fclose(fp);
-        sleep(1);
         gdk_threads_enter();
-        gtk_label_set_text(GTK_LABEL(content), get_cpu_usager(all1, all2, idle1, idle2));
+        get_fstab_info(table_head);
         gdk_threads_leave();
     }
     return NULL;
@@ -189,7 +209,7 @@ void *thread_func2(void *arg) {
 void *thread_func3(void *arg) {
     int num = 0, sum = 0;
     while(!endSignal) {
-        sleep(3);
+        sleep(1);
         gdk_threads_enter();
         gtk_label_set_text(GTK_LABEL(content), get_adder_info(&num, &sum));
         gdk_threads_leave();

@@ -11,6 +11,6 @@ link_directories(${GTK2_LIBRARY_DIRS})
 
 add_definitions(${GTK2_CFLAGS_OTHER})
 
-add_executable(mulproc_display main.c window_proc.h window_proc.c)
+add_executable(mulproc_display main.c window_proc.h window_proc.c table_op.c table_op.h)
 
 target_link_libraries(mulproc_display ${GTK2_LIBRARIES})

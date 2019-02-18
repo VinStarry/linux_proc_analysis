@@ -8,6 +8,7 @@
 #include <gtk/gtk.h>
 #include <malloc.h>
 #include <stdbool.h>
+#include "table_op.h"
 
 void wind_proc(int argc, char *argv[], int rank);
 gboolean destroy_handle(GtkWidget *self, GdkEvent *event, gpointer data);

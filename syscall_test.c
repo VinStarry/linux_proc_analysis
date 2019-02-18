@@ -9,7 +9,7 @@ int main()
 	printf("the syscall function returned %ld\n", copy_file);
 
 	FILE *fp_src, *fp_dst;
-	fp_src = fopen("paper.pdf", "wb");
+	fp_src = fopen("paper.pdf", "rb");
 	fp_dst = fopen("temp/paper.pdf", "rb");
 	
 	int result = 1;

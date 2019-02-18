@@ -109,6 +109,12 @@
 		<Unit filename="/home/vinstarry/projects/osdesign/mulproc_display/main.c">
 			<Option target="mulproc_display"/>
 		</Unit>
+		<Unit filename="/home/vinstarry/projects/osdesign/mulproc_display/table_op.c">
+			<Option target="mulproc_display"/>
+		</Unit>
+		<Unit filename="/home/vinstarry/projects/osdesign/mulproc_display/table_op.h">
+			<Option target="mulproc_display"/>
+		</Unit>
 		<Unit filename="/home/vinstarry/projects/osdesign/mulproc_display/window_proc.c">
 			<Option target="mulproc_display"/>
 		</Unit>

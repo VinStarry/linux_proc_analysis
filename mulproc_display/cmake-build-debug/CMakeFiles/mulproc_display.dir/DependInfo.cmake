@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
   "/home/vinstarry/projects/osdesign/mulproc_display/main.c" "/home/vinstarry/projects/osdesign/mulproc_display/cmake-build-debug/CMakeFiles/mulproc_display.dir/main.c.o"
+  "/home/vinstarry/projects/osdesign/mulproc_display/table_op.c" "/home/vinstarry/projects/osdesign/mulproc_display/cmake-build-debug/CMakeFiles/mulproc_display.dir/table_op.c.o"
   "/home/vinstarry/projects/osdesign/mulproc_display/window_proc.c" "/home/vinstarry/projects/osdesign/mulproc_display/cmake-build-debug/CMakeFiles/mulproc_display.dir/window_proc.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")

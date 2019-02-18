@@ -150,6 +150,33 @@ main.c.s:
 	$(MAKE) -f CMakeFiles/mulproc_display.dir/build.make CMakeFiles/mulproc_display.dir/main.c.s
 .PHONY : main.c.s
 
+table_op.o: table_op.c.o
+
+.PHONY : table_op.o
+
+# target to build an object file
+table_op.c.o:
+	$(MAKE) -f CMakeFiles/mulproc_display.dir/build.make CMakeFiles/mulproc_display.dir/table_op.c.o
+.PHONY : table_op.c.o
+
+table_op.i: table_op.c.i
+
+.PHONY : table_op.i
+
+# target to preprocess a source file
+table_op.c.i:
+	$(MAKE) -f CMakeFiles/mulproc_display.dir/build.make CMakeFiles/mulproc_display.dir/table_op.c.i
+.PHONY : table_op.c.i
+
+table_op.s: table_op.c.s
+
+.PHONY : table_op.s
+
+# target to generate assembly for a file
+table_op.c.s:
+	$(MAKE) -f CMakeFiles/mulproc_display.dir/build.make CMakeFiles/mulproc_display.dir/table_op.c.s
+.PHONY : table_op.c.s
+
 window_proc.o: window_proc.c.o
 
 .PHONY : window_proc.o
@@ -189,6 +216,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... table_op.o"
+	@echo "... table_op.i"
+	@echo "... table_op.s"
 	@echo "... window_proc.o"
 	@echo "... window_proc.i"
 	@echo "... window_proc.s"
