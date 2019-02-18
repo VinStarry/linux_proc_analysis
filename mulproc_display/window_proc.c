@@ -7,7 +7,7 @@
 #define BUF_LEN 50
 #define WINDOW_WIDTH 400
 #define WINDOW_HEIGHT 200
-#define HUGE_WINDOW_WIDTH 800
+#define HUGE_WINDOW_WIDTH 1000
 #define HUGE_WINDOW_HEIGHT 400
 #define BUTTON_WIDTH 200
 #define BUTTON_HEIGHT 50
@@ -64,6 +64,7 @@ void wind_proc(int argc, char *argv[], int rank) {
         table_head = (cross_linked_list *)malloc(sizeof(cross_linked_list));
 
         GtkWidget* pHtable = gtk_table_new(FSTAB_INFO_ROW, FSTAB_INFO_COL, false);
+        gtk_table_set_col_spacings(GTK_TABLE(pHtable), 10);
         gtk_scrolled_window_add_with_viewport (GTK_SCROLLED_WINDOW (scrolled), pHtable);
 
         init_table(pHtable, table_head);
