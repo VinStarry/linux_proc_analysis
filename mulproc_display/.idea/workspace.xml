@@ -12,16 +12,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="59c0f46d-883d-41b6-9dec-6e01f1a6bf21" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../proc_analysis/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../proc_analysis/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proc_analysis/cmake-build-debug/CMakeFiles/proc_analysis.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/../proc_analysis/cmake-build-debug/CMakeFiles/proc_analysis.dir/C.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proc_analysis/cmake-build-debug/CMakeFiles/proc_analysis.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/../proc_analysis/cmake-build-debug/CMakeFiles/proc_analysis.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proc_analysis/cmake-build-debug/CMakeFiles/proc_analysis.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../proc_analysis/cmake-build-debug/CMakeFiles/proc_analysis.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proc_analysis/cmake-build-debug/CMakeFiles/proc_analysis.dir/main.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/../proc_analysis/cmake-build-debug/CMakeFiles/proc_analysis.dir/main.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proc_analysis/cmake-build-debug/proc_analysis" beforeDir="false" afterPath="$PROJECT_DIR$/../proc_analysis/cmake-build-debug/proc_analysis" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proc_analysis/functions.c" beforeDir="false" afterPath="$PROJECT_DIR$/../proc_analysis/functions.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proc_analysis/functions.h" beforeDir="false" afterPath="$PROJECT_DIR$/../proc_analysis/functions.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proc_analysis/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/../proc_analysis/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../thread_display/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../thread_display/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/window_proc.c" beforeDir="false" afterPath="$PROJECT_DIR$/window_proc.c" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -42,13 +33,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1980">
-              <caret line="65" column="31" selection-start-line="65" selection-start-column="31" selection-end-line="65" selection-end-column="31" />
+            <state relative-caret-position="396">
+              <caret line="59" column="17" lean-forward="true" selection-start-line="59" selection-start-column="17" selection-end-line="59" selection-end-column="17" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
+                <element signature="e#1930#1968#0" expanded="true" />
                 <element signature="e#3045#3094#0" expanded="true" />
               </folding>
             </state>
@@ -67,18 +59,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/window_proc.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="293">
-              <caret line="165" column="8" selection-start-line="165" selection-start-column="8" selection-end-line="165" selection-end-column="8" />
+            <state relative-caret-position="648">
+              <caret line="129" lean-forward="true" selection-start-line="129" selection-end-line="129" />
               <folding>
+                <element signature="e#557#3090#0" />
                 <element signature="e#2138#2275#0" />
                 <element signature="e#2277#2642#0" />
                 <element signature="e#2644#3018#0" />
                 <element signature="e#3020#3413#0" />
                 <element signature="e#4239#4309#0" />
                 <element signature="e#4062#4515#0" />
+                <element signature="e#5881#5973#0" />
                 <element signature="e#4678#4901#0" />
                 <element signature="e#4903#5205#0" />
                 <element signature="e#5207#5465#0" />
@@ -92,6 +86,12 @@
           <provider selected="true" editor-type-id="text-editor">
             <state>
               <caret column="2" lean-forward="true" selection-start-column="2" selection-end-column="2" />
+              <folding>
+                <element signature="e#104#906#0" />
+                <element signature="e#115#1080#0" />
+                <element signature="e#1875#1945#0" />
+                <element signature="e#2375#3831#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -99,7 +99,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/table_op.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="557">
+            <state relative-caret-position="693">
               <caret line="25" column="35" lean-forward="true" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
             </state>
           </provider>
@@ -201,12 +201,12 @@
       <workItem from="1550470511429" duration="1265000" />
       <workItem from="1550474366189" duration="121000" />
       <workItem from="1550474510820" duration="585000" />
-      <workItem from="1550475121272" duration="4309000" />
+      <workItem from="1550475121272" duration="4417000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14848000" />
+    <option name="totallyTimeSpent" value="14956000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="34" width="2560" height="1566" extended-state="6" />
@@ -217,14 +217,14 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.38237384" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.38237384" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39872068" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
       <window_info anchor="bottom" id="Messages" order="8" weight="0.32551527" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.2857143" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.2857143" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="11" weight="0.32977968" />
       <window_info anchor="bottom" id="CMake" order="12" weight="0.3298969" />
@@ -245,14 +245,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.c">
+    <entry file="file://$PROJECT_DIR$/window_proc.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1980">
-          <caret line="65" column="31" selection-start-line="65" selection-start-column="31" selection-end-line="65" selection-end-column="31" />
+        <state relative-caret-position="648">
+          <caret line="129" lean-forward="true" selection-start-line="129" selection-end-line="129" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
-            <element signature="e#3045#3094#0" expanded="true" />
+            <element signature="e#557#3090#0" />
+            <element signature="e#2138#2275#0" />
+            <element signature="e#2277#2642#0" />
+            <element signature="e#2644#3018#0" />
+            <element signature="e#3020#3413#0" />
+            <element signature="e#4239#4309#0" />
+            <element signature="e#4062#4515#0" />
+            <element signature="e#5881#5973#0" />
+            <element signature="e#4678#4901#0" />
+            <element signature="e#4903#5205#0" />
+            <element signature="e#5207#5465#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/table_op.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="2" lean-forward="true" selection-start-column="2" selection-end-column="2" />
+          <folding>
+            <element signature="e#104#906#0" />
+            <element signature="e#115#1080#0" />
+            <element signature="e#1875#1945#0" />
+            <element signature="e#2375#3831#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/table_op.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="693">
+          <caret line="25" column="35" lean-forward="true" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
         </state>
       </provider>
     </entry>
@@ -266,34 +295,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/table_op.h">
+    <entry file="file://$PROJECT_DIR$/main.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="557">
-          <caret line="25" column="35" lean-forward="true" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/table_op.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="2" lean-forward="true" selection-start-column="2" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/window_proc.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="165" column="8" selection-start-line="165" selection-start-column="8" selection-end-line="165" selection-end-column="8" />
+        <state relative-caret-position="396">
+          <caret line="59" column="17" lean-forward="true" selection-start-line="59" selection-start-column="17" selection-end-line="59" selection-end-column="17" />
           <folding>
-            <element signature="e#2138#2275#0" />
-            <element signature="e#2277#2642#0" />
-            <element signature="e#2644#3018#0" />
-            <element signature="e#3020#3413#0" />
-            <element signature="e#4239#4309#0" />
-            <element signature="e#4062#4515#0" />
-            <element signature="e#4678#4901#0" />
-            <element signature="e#4903#5205#0" />
-            <element signature="e#5207#5465#0" />
+            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#1930#1968#0" expanded="true" />
+            <element signature="e#3045#3094#0" expanded="true" />
           </folding>
         </state>
       </provider>

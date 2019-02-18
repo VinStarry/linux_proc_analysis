@@ -26,8 +26,7 @@ long all1 = 0, all2 = 0, idle1 = 0, idle2 = 0;
 
 cross_linked_list *table_head = NULL;
 
-void wind_proc(int argc, char *argv[], int rank)
-{
+void wind_proc(int argc, char *argv[], int rank) {
     gtk_init(&argc, &argv);
     // main window
     GtkWidget *window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
