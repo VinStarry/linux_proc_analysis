@@ -131,13 +131,9 @@ char *get_system_time() {
 
 char *get_adder_info(int *number, int *sum) {
     char *adder_text = (char *)malloc(sizeof(char) * BUF_LEN);
-    if (*number <= 1000) {
-        sprintf(adder_text, "%d + %d = %d\n", *sum, *number, *sum + *number);
-        *sum = *sum + *number;
-        *number = *number + 1;
-    }
-    else
-        sprintf(adder_text, "%d + %d = %d\n", *sum, *number, *sum + *number);
+    sprintf(adder_text, "%d + %d = %d\n", *sum, *number, *sum + *number);
+    *sum = *sum + *number;
+    *number = *number + 1;
     return adder_text;
 }
 
@@ -210,6 +206,8 @@ void *thread_func3(void *arg) {
     int num = 0, sum = 0;
     while(!endSignal) {
         sleep(1);
+        if (num > 1000)
+            continue;
         gdk_threads_enter();
         gtk_label_set_text(GTK_LABEL(content), get_adder_info(&num, &sum));
         gdk_threads_leave();

@@ -80,7 +80,6 @@ int main(int argc, char *argv[])
 
 gboolean destroy_handle(GtkWidget *self, GdkEvent *event, gpointer data) {
     endSignal = true;
-    g_thread_join(th);
     gtk_main_quit();
     return FALSE;
 }
