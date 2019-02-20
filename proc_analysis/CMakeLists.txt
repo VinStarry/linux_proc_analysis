@@ -11,6 +11,6 @@ link_directories(${GTK2_LIBRARY_DIRS})
 
 add_definitions(${GTK2_CFLAGS_OTHER})
 
-add_executable(proc_analysis main.c functions.c functions.h)
+add_executable(proc_analysis main.c functions.c functions.h mem_page.c mem_page.h ps_page.c ps_page.h)
 
 target_link_libraries(proc_analysis ${GTK2_LIBRARIES})

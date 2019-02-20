@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/proc_analysis.dir/main.c.o"
   "CMakeFiles/proc_analysis.dir/functions.c.o"
+  "CMakeFiles/proc_analysis.dir/mem_page.c.o"
+  "CMakeFiles/proc_analysis.dir/ps_page.c.o"
   "proc_analysis.pdb"
   "proc_analysis"
 )

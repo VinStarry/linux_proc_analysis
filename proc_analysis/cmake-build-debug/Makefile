@@ -177,6 +177,60 @@ main.c.s:
 	$(MAKE) -f CMakeFiles/proc_analysis.dir/build.make CMakeFiles/proc_analysis.dir/main.c.s
 .PHONY : main.c.s
 
+mem_page.o: mem_page.c.o
+
+.PHONY : mem_page.o
+
+# target to build an object file
+mem_page.c.o:
+	$(MAKE) -f CMakeFiles/proc_analysis.dir/build.make CMakeFiles/proc_analysis.dir/mem_page.c.o
+.PHONY : mem_page.c.o
+
+mem_page.i: mem_page.c.i
+
+.PHONY : mem_page.i
+
+# target to preprocess a source file
+mem_page.c.i:
+	$(MAKE) -f CMakeFiles/proc_analysis.dir/build.make CMakeFiles/proc_analysis.dir/mem_page.c.i
+.PHONY : mem_page.c.i
+
+mem_page.s: mem_page.c.s
+
+.PHONY : mem_page.s
+
+# target to generate assembly for a file
+mem_page.c.s:
+	$(MAKE) -f CMakeFiles/proc_analysis.dir/build.make CMakeFiles/proc_analysis.dir/mem_page.c.s
+.PHONY : mem_page.c.s
+
+ps_page.o: ps_page.c.o
+
+.PHONY : ps_page.o
+
+# target to build an object file
+ps_page.c.o:
+	$(MAKE) -f CMakeFiles/proc_analysis.dir/build.make CMakeFiles/proc_analysis.dir/ps_page.c.o
+.PHONY : ps_page.c.o
+
+ps_page.i: ps_page.c.i
+
+.PHONY : ps_page.i
+
+# target to preprocess a source file
+ps_page.c.i:
+	$(MAKE) -f CMakeFiles/proc_analysis.dir/build.make CMakeFiles/proc_analysis.dir/ps_page.c.i
+.PHONY : ps_page.c.i
+
+ps_page.s: ps_page.c.s
+
+.PHONY : ps_page.s
+
+# target to generate assembly for a file
+ps_page.c.s:
+	$(MAKE) -f CMakeFiles/proc_analysis.dir/build.make CMakeFiles/proc_analysis.dir/ps_page.c.s
+.PHONY : ps_page.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -192,6 +246,12 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... mem_page.o"
+	@echo "... mem_page.i"
+	@echo "... mem_page.s"
+	@echo "... ps_page.o"
+	@echo "... ps_page.i"
+	@echo "... ps_page.s"
 .PHONY : help
 
 

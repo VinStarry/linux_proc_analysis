@@ -115,6 +115,18 @@
 		<Unit filename="/home/vinstarry/projects/osdesign/proc_analysis/main.c">
 			<Option target="proc_analysis"/>
 		</Unit>
+		<Unit filename="/home/vinstarry/projects/osdesign/proc_analysis/mem_page.c">
+			<Option target="proc_analysis"/>
+		</Unit>
+		<Unit filename="/home/vinstarry/projects/osdesign/proc_analysis/mem_page.h">
+			<Option target="proc_analysis"/>
+		</Unit>
+		<Unit filename="/home/vinstarry/projects/osdesign/proc_analysis/ps_page.c">
+			<Option target="proc_analysis"/>
+		</Unit>
+		<Unit filename="/home/vinstarry/projects/osdesign/proc_analysis/ps_page.h">
+			<Option target="proc_analysis"/>
+		</Unit>
 		<Unit filename="/home/vinstarry/projects/osdesign/proc_analysis/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

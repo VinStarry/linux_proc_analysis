@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <gtk/gtk.h>
 #include "functions.h"
+#include "mem_page.h"
+#include "ps_page.h"
 
 #define WINDOW_WIDTH 1500
 #define WINDOW_HIGHT 1200
@@ -43,15 +45,28 @@ int main(int argc, char *argv[])
 
     // page two
     label = gtk_label_new("Process");
-    second_vbox = get_proc_info();
+    second_vbox = gtk_vbox_new(FALSE, 5);
+    GtkWidget *proc_frame = get_proc_info();
+    gtk_container_add(GTK_CONTAINER(second_vbox), proc_frame);
 
     gtk_notebook_append_page(GTK_NOTEBOOK(notebook), second_vbox, label);
 
     // page three
     label = gtk_label_new("Memory");
     third_vbox = gtk_vbox_new(TRUE, 5);
+
+    GtkWidget *mem_frame_title = gtk_label_new("");
+    gtk_label_set_markup(
+            GTK_LABEL(mem_frame_title),
+            "<span foreground='brown' font_desc='24'>Memory specific</span>");
+
+    GtkWidget *mem_frame = gtk_frame_new("");
+    gtk_frame_set_label_widget(GTK_FRAME(mem_frame), mem_frame_title);
+    gtk_container_set_border_width(GTK_CONTAINER(mem_frame), 20);
+    gtk_container_add(GTK_CONTAINER(third_vbox), mem_frame);
+
     GtkWidget *scrolled = gtk_scrolled_window_new(NULL,NULL);
-    gtk_container_add(GTK_CONTAINER(third_vbox),scrolled);
+    gtk_container_add(GTK_CONTAINER(mem_frame),scrolled);
     gtk_scrolled_window_set_policy(GTK_SCROLLED_WINDOW(scrolled), GTK_POLICY_AUTOMATIC, GTK_POLICY_ALWAYS);
     lb_head = (lb_list *)malloc(sizeof(lb_head));
     lb_head->next = NULL;
