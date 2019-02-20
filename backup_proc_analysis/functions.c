@@ -7,77 +7,73 @@
 #define WINDOW_WIDTH 1200
 #define WINDOW_HIGHT 800
 #define VALUE_MAX_LEN 100
+#define SPECIFIC_LENGTH 1000
 
 GtkWidget *system_general_info(void) {
     GtkWidget *vbox = gtk_vbox_new(false, 0);
+    char sys_specific[SPECIFIC_LENGTH];
+    char cm_brief[SPECIFIC_LENGTH];
+    memset(sys_specific, 0, sizeof(sys_specific)/ sizeof(char));
+    memset(cm_brief, 0, sizeof(cm_brief)/ sizeof(char));
 
-    GtkWidget *cpu_vbox = gtk_vbox_new(false, 0);
-    GtkWidget *version_vbox = gtk_vbox_new(false, 0);
-    GtkWidget *specific_vbox = gtk_vbox_new(false, 0);
-
-    gtk_box_pack_start(GTK_BOX(vbox), cpu_vbox, false, false, 0);
-    gtk_box_pack_start(GTK_BOX(vbox), version_vbox, false, false, 0);
-    gtk_box_pack_start(GTK_BOX(vbox), specific_vbox, false, false, 0);
-//    gtk_container_add(GTK_CONTAINER(vbox), specific_vbox);
-
-    GtkWidget *label = gtk_label_new("CPU Information");
+    GtkWidget *sys_frame_title = gtk_label_new("");
     gtk_label_set_markup(
-            GTK_LABEL(label),
-            "<span foreground='red' font_desc='24'>CPU Information</span>");
-    gtk_container_add(GTK_CONTAINER(cpu_vbox), label);
+            GTK_LABEL(sys_frame_title),
+            "<span foreground='brown' font_desc='24'>System information</span>");
 
-    char *model_name = get_cpu_info_by_key("model name");
-    if (model_name) {
-        GtkWidget *cpu_model_name = gtk_label_new(model_name);
-        gtk_container_add(GTK_CONTAINER(cpu_vbox), cpu_model_name);
-    }
-
-    char *cores = get_cpu_info_by_key("cpu cores");
-    if (cores) {
-        GtkWidget *cpu_cores = gtk_label_new(cores);
-        gtk_container_add(GTK_CONTAINER(cpu_vbox), cpu_cores);
-    }
-
-    char *mhz = get_cpu_info_by_key("cpu MHz");
-    if (mhz) {
-        GtkWidget *cpu_mhz = gtk_label_new(mhz);
-        gtk_container_add(GTK_CONTAINER(cpu_vbox), cpu_mhz);
-    }
-
-    char *c_size = get_cpu_info_by_key("cache size");
-    if (c_size) {
-        GtkWidget *cpu_cache_size = gtk_label_new(c_size);
-        gtk_container_add(GTK_CONTAINER(cpu_vbox), cpu_cache_size);
-    }
-
-    GtkWidget *new_line = gtk_label_new("\n");
-    gtk_container_add(GTK_CONTAINER(version_vbox), new_line);
-
-    GtkWidget *version_label = gtk_label_new("Version Information");
+    GtkWidget *cm_frame_title = gtk_label_new("");
     gtk_label_set_markup(
-            GTK_LABEL(version_label),
-            "<span foreground='red' font_desc='24'>Version Information</span>");
+            GTK_LABEL(cm_frame_title),
+            "<span foreground='brown' font_desc='24'>Brief information</span>");
 
-    gtk_container_add(GTK_CONTAINER(version_vbox), version_label);
-
-    char *k_ver = get_kernel_version(0);
-    GtkWidget *kernel_version = gtk_label_new(k_ver);
-    gtk_container_add(GTK_CONTAINER(version_vbox), kernel_version);
-
-    char *c_ver = get_kernel_version(1);
-    GtkWidget *compiler_version = gtk_label_new(c_ver);
-    gtk_container_add(GTK_CONTAINER(version_vbox), compiler_version);
-    GtkWidget *new_line_2 = gtk_label_new("\n");
-    gtk_container_add(GTK_CONTAINER(version_vbox), new_line_2);
-
-    GtkWidget *specific_label = gtk_label_new("CPU Information");
+    GtkWidget *cpu_frame_title = gtk_label_new("");
     gtk_label_set_markup(
-            GTK_LABEL(specific_label),
-            "<span foreground='red' font_desc='24'>Specific Information</span>");
-    gtk_container_add(GTK_CONTAINER(specific_vbox), specific_label);
+            GTK_LABEL(cpu_frame_title),
+            "<span foreground='brown' font_desc='24'>CPU specific</span>");
+
+    GtkWidget *system_frame = gtk_frame_new("");
+    gtk_frame_set_label_widget(GTK_FRAME(system_frame), sys_frame_title);
+    gtk_container_set_border_width(GTK_CONTAINER(system_frame), 20);
+
+    GtkWidget *cm_frame = gtk_frame_new("");
+    gtk_frame_set_label_widget(GTK_FRAME(cm_frame), cm_frame_title);
+    gtk_container_set_border_width(GTK_CONTAINER(cm_frame), 20);
+
+    GtkWidget *cpu_specific = gtk_frame_new("");
+    gtk_frame_set_label_widget(GTK_FRAME(cpu_specific), cpu_frame_title);
+    gtk_container_set_border_width(GTK_CONTAINER(cpu_specific), 20);
+
+    gtk_box_pack_start(GTK_BOX(vbox), system_frame, false, false, 0);
+    gtk_box_pack_start(GTK_BOX(vbox), cm_frame, false, false, 0);
+    gtk_box_pack_start(GTK_BOX(vbox), cpu_specific, false, false, 0);
+
+    GtkWidget *label = gtk_label_new("");
+    gtk_container_add(GTK_CONTAINER(system_frame), label);
+
+    sprintf(sys_specific, "%s\n%s\n%s\n%s\n",
+            get_kernel_version(0),
+            get_kernel_version(1),
+            get_uptime(0),
+            get_uptime(1));
+
+    gtk_label_set_text(GTK_LABEL(label), sys_specific);
+
+    GtkWidget *brief_label = gtk_label_new("");
+
+    gtk_container_add(GTK_CONTAINER(cm_frame), brief_label);
+
+    sprintf(cm_brief, "%s\n%s\n%s\n%s\n%s\n%s\n",
+            get_hostname(),
+            get_cpu_info_by_key("model name"),
+            get_cpu_info_by_key("cpu cores"),
+            get_cpu_info_by_key("cpu MHz"),
+            get_cpu_info_by_key("cache size"),
+            get_total_memory());
+
+    gtk_label_set_text(GTK_LABEL(brief_label), cm_brief);
 
     GtkWidget *scrolled = gtk_scrolled_window_new(NULL,NULL);
-    gtk_container_add(GTK_CONTAINER(specific_vbox),scrolled);
+    gtk_container_add(GTK_CONTAINER(cpu_specific),scrolled);
     gtk_scrolled_window_set_policy(GTK_SCROLLED_WINDOW(scrolled), GTK_POLICY_AUTOMATIC, GTK_POLICY_ALWAYS);
 
     GtkWidget *text=gtk_text_view_new();
@@ -159,7 +155,7 @@ char *get_kernel_version(int rank) {
                 rtn[i] = ' ';
                 break;
             }
-        rtn[i++] = '\t';
+        rtn[i++] = ' ';
         ch = (char)getc(fp);
         while (ch != EOF) {
             if (ch == '(') {
@@ -177,7 +173,7 @@ char *get_kernel_version(int rank) {
                 rtn[i] = ' ';
                 break;
             }
-        rtn[i++] = '\t';
+        rtn[i++] = ' ';
         ch = (char)getc(fp);
         int par_count = 0;
         while (ch != EOF) {
@@ -469,4 +465,100 @@ void refresh_memory_info(lb_list *head) {
         ptr = ptr->next;
     }
     fclose(fp);
+}
+
+char *get_uptime(int rank) {
+    FILE *fp = fopen("/proc/uptime", "r");
+    double up = 0, idle = 0;
+    char *up_time = (char *)malloc(sizeof(char) * VALUE_MAX_LEN);
+    char *idle_time = (char *)malloc(sizeof(char) * VALUE_MAX_LEN);
+
+    if (fp == NULL) {
+        strcpy(up_time, "Open /proc/uptime error");
+        strcpy(idle_time, "Open /proc/uptime error");
+    }
+    else {
+        fscanf(fp, "%lf %lf", &up, &idle);
+
+        if (up <= 60) {
+            sprintf(up_time, "Up time: %.2lf seconds", up);
+        }
+        else if (up <= 60 * 60) {
+            sprintf(up_time, "Up time: %.2lf minutes", up / 60);
+        }
+        else{
+            sprintf(up_time, "Up time: %.2lf days", up / 60 / 60);
+        }
+
+        if (idle <= 60) {
+            sprintf(idle_time, "Idle time: %.2lf seconds", idle);
+        }
+        else if (idle <= 60 * 60) {
+            sprintf(idle_time, "Idle time: %.2lf minutes", idle / 60);
+        }
+        else{
+            sprintf(idle_time, "Idle time: %.2lf days", idle / 60 / 60);
+        }
+
+    }
+
+    fclose(fp);
+    if (rank == 0) {
+        free(idle_time);
+        idle_time = NULL;
+        return up_time;
+    }
+    else {
+        free(up_time);
+        up_time = NULL;
+        return idle_time;
+    }
+}
+
+char *get_total_memory(void) {
+    FILE *fp = fopen("/proc/meminfo", "r");
+    double up = 0, idle = 0;
+    char *rtn = (char *)malloc(sizeof(char) * VALUE_MAX_LEN);
+    char memtotal[VALUE_MAX_LEN / 2];
+    unsigned long sz;
+
+    if (fp == NULL) {
+        strcpy(rtn, "Open /proc/meminfo error");
+    }
+    else {
+        fscanf(fp, "%s %lu", memtotal, &sz);
+        if (sz <= 1024) {
+            sprintf(rtn, "%s\t%lu KB", memtotal, sz);
+        }
+        else if (sz <= 1024 * 1024) {
+            sprintf(rtn, "%s\t%lu MB", memtotal, (unsigned long)(sz / 1024.0 + 0.5));
+        }
+        else {
+            sprintf(rtn, "%s\t%lu GB", memtotal, (unsigned long)(sz / 1024.0 / 1024.0 + 0.5));
+        }
+    }
+    fclose(fp);
+
+    return rtn;
+}
+
+char *get_hostname(void) {
+    FILE *fp = fopen("/proc/sys/kernel/hostname", "r");
+    double up = 0, idle = 0;
+    char *rtn = (char *)malloc(sizeof(char) * VALUE_MAX_LEN);
+    char hostname[VALUE_MAX_LEN / 2];
+
+    if (fp == NULL) {
+        strcpy(rtn, "Open /proc/sys/kernel/hostname error");
+    }
+    else {
+        fscanf(fp, "%s", hostname);
+        if (hostname[0] < 'z' && hostname[0] > 'a')
+            hostname[0] += ('A' - 'a');
+        sprintf(rtn, "Hostname:\t%s", hostname);
+    }
+
+    fclose(fp);
+
+    return rtn;
 }
