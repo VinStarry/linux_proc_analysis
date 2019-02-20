@@ -8,11 +8,13 @@
 #define WINDOW_WIDTH 400
 #define WINDOW_HEIGHT 200
 #define HUGE_WINDOW_WIDTH 1000
-#define HUGE_WINDOW_HEIGHT 400
+#define HUGE_WINDOW_HEIGHT 600
 #define BUTTON_WIDTH 200
 #define BUTTON_HEIGHT 50
 #define FSTAB_INFO_COL 6
 #define FSTAB_INFO_ROW 20
+#define MAX_SPEC 2000
+#define MAX_LINE_C 200
 
 typedef struct _re_data {
     GtkWidget *label;
@@ -25,6 +27,7 @@ int proc_num = 0;
 long all1 = 0, all2 = 0, idle1 = 0, idle2 = 0;
 
 cross_linked_list *table_head = NULL;
+GtkWidget *label_output = NULL;
 
 void wind_proc(int argc, char *argv[], int rank) {
     gtk_init(&argc, &argv);
@@ -68,6 +71,16 @@ void wind_proc(int argc, char *argv[], int rank) {
         gtk_scrolled_window_add_with_viewport (GTK_SCROLLED_WINDOW (scrolled), pHtable);
 
         init_table(pHtable, table_head);
+
+        GtkWidget *specific_content = gtk_label_new("specific content");
+        gtk_box_pack_start(GTK_BOX(vbox), GTK_WIDGET(specific_content), FALSE, FALSE, 0);
+
+        label_output = gtk_label_new("");
+        GtkWidget *scrolled2 = gtk_scrolled_window_new(NULL,NULL);
+        gtk_container_add(GTK_CONTAINER(vbox), scrolled2);
+        gtk_scrolled_window_set_policy(GTK_SCROLLED_WINDOW(scrolled2), GTK_POLICY_AUTOMATIC, GTK_POLICY_ALWAYS);
+
+        gtk_scrolled_window_add_with_viewport (GTK_SCROLLED_WINDOW (scrolled2), label_output);
     }
 
     gtk_container_add(GTK_CONTAINER(window), vbox);
@@ -159,6 +172,21 @@ char *get_adder_info(int *number, int *sum) {
 //    return usage_text;
 //}
 
+char *refresh_content(int line_no) {
+    FILE *fp_fstab = NULL;
+    char *message = (char *)malloc(sizeof(char) * MAX_LINE_C);
+    fp_fstab = fopen("/etc/fstab", "r");
+    if (fp_fstab == NULL)
+        strcpy(message, "Cannot open /etc/fstab.\n");
+    else {
+        for (int i = 0; i <= line_no; i++) {
+            if (fgets(message, MAX_LINE_C, fp_fstab) == NULL)
+                strcpy(message, "");
+        }
+    }
+    return message;
+}
+
 void start_display(GtkWidget *self, GdkEvent *event, gpointer data) {
     endSignal = false;
     GThread *th;
@@ -167,7 +195,7 @@ void start_display(GtkWidget *self, GdkEvent *event, gpointer data) {
             th = g_thread_new ("a", thread_func1, NULL);
             break;
         case 1:
-            th = g_thread_new ("a", thread_func2, NULL);
+            th = g_thread_new ("b", thread_func2, NULL);
             break;
         case 2:
             th = g_thread_new ("c", thread_func3, NULL);
@@ -192,11 +220,17 @@ void *thread_func1(void *arg) {
 }
 
 void *thread_func2(void *arg) {
+    char specific[MAX_SPEC] = {'\0'};
+    memset(specific, 0, MAX_SPEC);
+    int line_number = 0;
     while(!endSignal) {
         sleep(1);
-
         gdk_threads_enter();
         get_fstab_info(table_head);
+        char *temp = refresh_content(line_number);
+        line_number++;
+        strcat(specific, temp);
+        gtk_label_set_text(GTK_LABEL(label_output), specific);
         gdk_threads_leave();
     }
     return NULL;

@@ -13,7 +13,10 @@
   <component name="ChangeListManager">
     <list default="true" id="59c0f46d-883d-41b6-9dec-6e01f1a6bf21" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mulproc_display.dir/window_proc.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mulproc_display.dir/window_proc.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/mulproc_display" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/window_proc.c" beforeDir="false" afterPath="$PROJECT_DIR$/window_proc.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/window_proc.h" beforeDir="false" afterPath="$PROJECT_DIR$/window_proc.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../proc_analysis/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../proc_analysis/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../proc_analysis/cmake-build-debug/CMakeFiles/proc_analysis.dir/main.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/../proc_analysis/cmake-build-debug/CMakeFiles/proc_analysis.dir/main.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../proc_analysis/cmake-build-debug/proc_analysis" beforeDir="false" afterPath="$PROJECT_DIR$/../proc_analysis/cmake-build-debug/proc_analysis" afterDir="false" />
@@ -41,8 +44,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+            <state relative-caret-position="924">
+              <caret line="28" selection-start-line="28" selection-end-line="28" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
                 <element signature="e#1930#1968#0" expanded="true" />
@@ -55,8 +58,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/window_proc.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+            <state relative-caret-position="561">
+              <caret line="20" selection-start-line="20" selection-end-line="20" selection-end-column="34" />
               <folding>
                 <element signature="e#119#139#0" expanded="true" />
               </folding>
@@ -67,8 +70,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/window_proc.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="449">
-              <caret line="135" column="26" selection-start-line="135" selection-start-column="26" selection-end-line="135" selection-end-column="26" />
+            <state relative-caret-position="198">
+              <caret line="6" column="18" lean-forward="true" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -76,8 +79,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/table_op.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="2" selection-start-column="2" selection-end-column="2" />
+            <state relative-caret-position="2508">
+              <caret line="76" column="56" selection-start-line="76" selection-start-column="49" selection-end-line="76" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -85,8 +88,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/table_op.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="825">
-              <caret line="25" column="35" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
+            <state relative-caret-position="726">
+              <caret line="22" column="48" selection-start-line="22" selection-start-column="48" selection-end-line="22" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -99,6 +102,8 @@
       <find>thread_func3</find>
       <find>cpu usage</find>
       <find>title</find>
+      <find>refresh_content</find>
+      <find>gets</find>
     </findStrings>
     <replaceStrings>
       <replace>sys_time</replace>
@@ -112,18 +117,18 @@
       <list>
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/main.c" />
-        <option value="$PROJECT_DIR$/window_proc.h" />
-        <option value="$PROJECT_DIR$/table_op.h" />
         <option value="$PROJECT_DIR$/table_op.c" />
+        <option value="$PROJECT_DIR$/table_op.h" />
+        <option value="$PROJECT_DIR$/window_proc.h" />
         <option value="$PROJECT_DIR$/window_proc.c" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="418" />
-    <option name="y" value="35" />
-    <option name="width" value="1988" />
-    <option name="height" value="1353" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="181" />
+    <option name="y" value="81" />
+    <option name="width" value="1958" />
+    <option name="height" value="1335" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -133,7 +138,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -145,6 +149,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -189,30 +194,35 @@
       <workItem from="1550474510820" duration="585000" />
       <workItem from="1550475121272" duration="4489000" />
       <workItem from="1550479971275" duration="718000" />
-      <workItem from="1550481478699" duration="504000" />
+      <workItem from="1550481478699" duration="619000" />
+      <workItem from="1550535239118" duration="11000" />
+      <workItem from="1550541429375" duration="631000" />
+      <workItem from="1550543183604" duration="3713000" />
+      <workItem from="1550643251276" duration="113000" />
+      <workItem from="1550643686008" duration="266000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16250000" />
+    <option name="totallyTimeSpent" value="21099000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="34" width="2560" height="1566" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14514835" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15396953" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.38237384" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32054016" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39872068" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.32551527" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.28429282" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.32480454" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.28287137" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="11" weight="0.32977968" />
       <window_info anchor="bottom" id="CMake" order="12" weight="0.3298969" />
@@ -233,10 +243,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/table_op.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2508">
+          <caret line="76" column="56" selection-start-line="76" selection-start-column="49" selection-end-line="76" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/table_op.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="726">
+          <caret line="22" column="48" selection-start-line="22" selection-start-column="48" selection-end-line="22" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+        <state relative-caret-position="924">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
             <element signature="e#1930#1968#0" expanded="true" />
@@ -247,32 +271,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/window_proc.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+        <state relative-caret-position="561">
+          <caret line="20" selection-start-line="20" selection-end-line="20" selection-end-column="34" />
           <folding>
             <element signature="e#119#139#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/table_op.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="2" selection-start-column="2" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/table_op.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="825">
-          <caret line="25" column="35" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/window_proc.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
-          <caret line="135" column="26" selection-start-line="135" selection-start-column="26" selection-end-line="135" selection-end-column="26" />
+        <state relative-caret-position="198">
+          <caret line="6" column="18" lean-forward="true" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
         </state>
       </provider>
     </entry>

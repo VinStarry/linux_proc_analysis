@@ -18,6 +18,7 @@ void stop_display(GtkWidget *self, GdkEvent *event, gpointer data);
 char *get_system_time(void);
 char *get_adder_info(int *number, int *sum);
 char *get_cpu_usager(long all1, long all2, long idle1, long idle2);
+char *refresh_content(int line_no);
 void *thread_func1(void *arg);
 void *thread_func2(void *arg);
 void *thread_func3(void *arg);
