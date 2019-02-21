@@ -52,5 +52,15 @@ int read_info(char *d_name, struct ps_info *p1);
 GtkWidget* print_ps(struct ps_info *head);
 bool str_pure_num(char *str);
 void uid_to_name(uid_t uid, struct ps_info *p1);         //由进程uid得到进程的所有者user
+gboolean update_cpu_usage (gpointer user_data);
+gboolean update_mem_usage (gpointer user_data);
+gboolean usage_cpu_draw(GtkWidget *widget,GdkEventExpose *event,gpointer data);
+gboolean usage_mem_draw(GtkWidget *widget,GdkEventExpose *event,gpointer data);
+gboolean fresh_cpu_record(GtkWidget *widget);
+gboolean fresh_mem_record(GtkWidget *widget);
+void add_cpu_usage_into_array(double usage);
+void add_mem_usage_into_array(double usage);
+void debug_print_cpu_array(void);
+void init_cpu_array(void);
 
 #endif //PROC_ANALYSIS_PS_PAGE_H

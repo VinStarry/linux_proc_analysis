@@ -6,6 +6,8 @@
 
 #define WINDOW_WIDTH 1500
 #define WINDOW_HIGHT 1200
+#define LINE_CHART_WIDTH 1500
+#define LINE_CHART_HEIGHT 160
 
 gboolean destroy_handle(GtkWidget *self, GdkEvent *event, gpointer data);
 void switch_page_handle(GtkNotebook *notebook, gpointer page, guint page_num, gpointer data);
@@ -17,8 +19,7 @@ GThread *th;
 GtkWidget *vbox, *second_vbox, *third_vbox;
 lb_list *lb_head;
 
-int main(int argc, char *argv[])
-{
+int main(int argc, char *argv[]) {
     gtk_init(&argc, &argv);
 
     // main window
@@ -46,6 +47,42 @@ int main(int argc, char *argv[])
     // page two
     label = gtk_label_new("Process");
     second_vbox = gtk_vbox_new(FALSE, 5);
+    GtkWidget *overall_frame_title = gtk_label_new("");
+    gtk_label_set_markup(
+            GTK_LABEL(overall_frame_title),
+            "<span foreground='brown' font_desc='24'>Overall Information</span>");
+
+    GtkWidget *overall_frame = gtk_frame_new("");
+    gtk_frame_set_label_widget(GTK_FRAME(overall_frame), overall_frame_title);
+    gtk_container_set_border_width(GTK_CONTAINER(overall_frame), 20);
+    gtk_box_pack_start(GTK_BOX(second_vbox), overall_frame, false, false, 5);
+
+    GtkWidget *cpu_usage = gtk_label_new("CPU usage: 0.0%");
+    GtkWidget *usage_info_vbox = gtk_vbox_new(false, 0);
+
+    init_cpu_array();
+    GtkWidget *cpu_usage_drawing_area = gtk_drawing_area_new();
+    gtk_widget_set_size_request(cpu_usage_drawing_area, LINE_CHART_WIDTH, LINE_CHART_HEIGHT);
+
+    gtk_box_pack_start(GTK_BOX(usage_info_vbox), cpu_usage_drawing_area, false, false, 5);
+    gtk_box_pack_start(GTK_BOX(usage_info_vbox), cpu_usage, false, false, 5);
+
+    g_timeout_add(1000, update_cpu_usage, cpu_usage);
+    g_signal_connect(G_OBJECT(cpu_usage_drawing_area), "expose_event", G_CALLBACK(usage_cpu_draw), NULL);
+
+    GtkWidget *mem_usage = gtk_label_new("Memory usage: 0.0%");
+
+    GtkWidget *mem_usage_drawing_area = gtk_drawing_area_new();
+    gtk_widget_set_size_request(mem_usage_drawing_area, LINE_CHART_WIDTH, LINE_CHART_HEIGHT);
+
+    gtk_box_pack_start(GTK_BOX(usage_info_vbox), mem_usage_drawing_area, false, false, 5);
+    gtk_box_pack_start(GTK_BOX(usage_info_vbox), mem_usage, false, false, 5);
+
+    gtk_container_add(GTK_CONTAINER(overall_frame), usage_info_vbox);
+
+    g_timeout_add(1000, update_mem_usage, mem_usage);
+    g_signal_connect(G_OBJECT(mem_usage_drawing_area), "expose_event", G_CALLBACK(usage_mem_draw), NULL);
+
     GtkWidget *proc_frame = get_proc_info();
     gtk_container_add(GTK_CONTAINER(second_vbox), proc_frame);
 

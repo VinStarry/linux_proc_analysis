@@ -4,6 +4,17 @@
 
 #include "ps_page.h"
 
+#define BUF_LEN 50
+#define LINE_CHART_REAL_WIDTH 1200
+#define LINE_CHART_REAL_HEIGHT 160
+#define LINE_CHART_HORIZONTAL_BEGIN_POS 120
+#define LINE_CHART_LINE_SPACING 20
+#define LINE_CHART_DOT_STEP 120
+#define ARRAY_SIZE 10
+
+double cpu_usage_percent_array[ARRAY_SIZE] = {0.0};
+double mem_usage_percent_array[ARRAY_SIZE] = {0.0};
+
 GtkWidget *get_proc_info(void) {
     mps *head,*link;
 
@@ -50,8 +61,7 @@ mps *trav_dir(char *dir) {
     return head;
 }
 
-int read_info(char *d_name, mps *p1)
-{
+int read_info(char *d_name, mps *p1) {
     FILE *fd;
     char dir[20];
     struct stat infobuf;
@@ -195,4 +205,244 @@ GtkWidget* print_ps(struct ps_info *head) {
     }
 
     return ps_frame;
+}
+
+gboolean update_mem_usage (gpointer user_data) {
+    char *usage_text = (char *)malloc(sizeof(char) * BUF_LEN);
+
+    FILE *fp = fopen("/proc/meminfo", "r");
+    char total_name[BUF_LEN];
+    char free_name[BUF_LEN];
+    char kb[BUF_LEN];
+    unsigned long total_volume, free_volum;
+
+    fscanf(fp, "%s %ld %s", total_name, &total_volume, kb);
+    fscanf(fp, "%s %ld %s", free_name, &free_volum, kb);
+
+//    printf("%ld, %ld\n", total_volume, free_volum);
+
+    fclose(fp);
+
+    double usage = (double)(total_volume - free_volum) * 100.0 / (double)(total_volume);
+    sprintf(usage_text, "Memory usage = %.2f%%(%ldKB/ %ldKB)\n", usage, free_volum, total_volume);
+
+    add_mem_usage_into_array(usage);
+
+    GtkLabel *label = GTK_LABEL(user_data);
+
+    gtk_label_set_label(label, usage_text);
+
+    free(usage_text);
+    usage_text = NULL;
+
+    return G_SOURCE_CONTINUE; /* or G_SOURCE_REMOVE when you want to stop */
+}
+
+gboolean update_cpu_usage (gpointer user_data) {
+    static long all1 = 0, idle1 = 0, all2 = 0, idle2 = 0;
+
+    char *usage_text = (char *)malloc(sizeof(char) * BUF_LEN);
+
+    if (all1 == 0 && idle1 == 0) {
+        // initial
+        char buf[128] = {'\0'};
+        char cpu[5];
+        long int user, nice, sys, idle, iowait, irq, softirq;
+
+        FILE *fp = fopen("/proc/stat", "r");
+        fgets(buf, sizeof(buf), fp);
+        sscanf(buf, "%s%ld%ld%ld%ld%ld%ld%ld", cpu, &user, &nice, &sys, &idle, &iowait, &irq, &softirq);
+
+        all1 = user + nice + sys + idle + iowait + irq + softirq;
+        idle1 = idle;
+        fclose(fp);
+
+        sprintf(usage_text, "cpu usage = %.2f%%\n", 0.0);
+    }
+    else {
+        // data has gained
+        float usage;
+
+        char buf[128] = {'\0'};
+        char cpu[5];
+        long int user, nice, sys, idle, iowait, irq, softirq;
+
+        FILE *fp = fopen("/proc/stat", "r");
+        fgets(buf, sizeof(buf), fp);
+        sscanf(buf, "%s%ld%ld%ld%ld%ld%ld%ld", cpu, &user, &nice, &sys, &idle, &iowait, &irq, &softirq);
+
+        all2 = user + nice + sys + idle + iowait + irq + softirq;
+        idle2 = idle;
+        fclose(fp);
+
+        usage = (float) (all2 - all1 - (idle2 - idle1)) / (all2 - all1) * 100;
+
+        sprintf(usage_text, "cpu usage = %.2f%%\n", usage);
+        idle1 = idle2;
+        all1 = all2;
+        add_cpu_usage_into_array(usage);
+    }
+
+    GtkLabel *label = GTK_LABEL(user_data);
+
+    gtk_label_set_label(label, usage_text);
+
+    free(usage_text);
+    usage_text = NULL;
+
+    return G_SOURCE_CONTINUE; /* or G_SOURCE_REMOVE when you want to stop */
+}
+
+gboolean usage_cpu_draw(GtkWidget *widget,GdkEventExpose *event,gpointer data) {
+    gtk_timeout_add(1000, (GtkFunction)fresh_cpu_record, (gpointer)widget);
+    return TRUE;
+}
+
+gboolean usage_mem_draw(GtkWidget *widget,GdkEventExpose *event,gpointer data) {
+    gtk_timeout_add(1000, (GtkFunction)fresh_mem_record, (gpointer)widget);
+    return TRUE;
+}
+
+gboolean fresh_cpu_record(GtkWidget *widget) {
+    GdkColor color;
+    GdkDrawable *canvas;
+    GdkGC *gc;
+
+    canvas = widget->window;
+    gc = widget->style->fg_gc[GTK_WIDGET_STATE(widget)];
+
+    color.red = 0;
+    color.green = 0;
+    color.blue = 0;
+    gdk_gc_set_rgb_fg_color(gc, &color);
+
+    gdk_draw_rectangle(canvas, gc, TRUE, LINE_CHART_HORIZONTAL_BEGIN_POS, 0, LINE_CHART_REAL_WIDTH, LINE_CHART_REAL_HEIGHT);
+    color.red = 0;
+    color.green = 30000;
+    color.blue = 0;
+    gdk_gc_set_rgb_fg_color(gc, &color);
+    for (int i = LINE_CHART_LINE_SPACING; i < LINE_CHART_REAL_HEIGHT; i += LINE_CHART_LINE_SPACING) {
+        // draw horizontal lines
+        gdk_draw_line(canvas, gc, LINE_CHART_HORIZONTAL_BEGIN_POS, i, LINE_CHART_REAL_WIDTH + LINE_CHART_HORIZONTAL_BEGIN_POS, i);
+    }
+    
+    color.red = 0;
+    color.green = 65535;
+    color.blue = 0;
+    gdk_gc_set_rgb_fg_color(gc, &color);
+
+    for (int i = 0; i < ARRAY_SIZE - 1; i++) {
+        if (cpu_usage_percent_array[i] == 0 || cpu_usage_percent_array[i + 1] == 0) {
+            break;
+        }
+        else {
+            gdk_draw_line(canvas, gc,
+                    LINE_CHART_HORIZONTAL_BEGIN_POS + LINE_CHART_DOT_STEP * i, (int)((1 - cpu_usage_percent_array[i] / 100) * LINE_CHART_REAL_HEIGHT),
+                          LINE_CHART_HORIZONTAL_BEGIN_POS + LINE_CHART_DOT_STEP * (i + 1), (int)((1 - cpu_usage_percent_array[i + 1] / 100) * LINE_CHART_REAL_HEIGHT)
+                    );
+        }
+    }
+
+    color.red = 0;
+    color.green = 0;
+    color.blue = 0;
+    gdk_gc_set_rgb_fg_color(gc, &color);
+
+    return G_SOURCE_CONTINUE;
+}
+
+gboolean fresh_mem_record(GtkWidget *widget) {
+    GdkColor color;
+    GdkDrawable *canvas;
+    GdkGC *gc;
+
+    canvas = widget->window;
+    gc = widget->style->fg_gc[GTK_WIDGET_STATE(widget)];
+
+    color.red = 0;
+    color.green = 0;
+    color.blue = 0;
+    gdk_gc_set_rgb_fg_color(gc, &color);
+
+    gdk_draw_rectangle(canvas, gc, TRUE, LINE_CHART_HORIZONTAL_BEGIN_POS, 0, LINE_CHART_REAL_WIDTH, LINE_CHART_REAL_HEIGHT);
+    color.red = 0;
+    color.green = 30000;
+    color.blue = 0;
+    gdk_gc_set_rgb_fg_color(gc, &color);
+    for (int i = LINE_CHART_LINE_SPACING; i < LINE_CHART_REAL_HEIGHT; i += LINE_CHART_LINE_SPACING) {
+        // draw horizontal lines
+        gdk_draw_line(canvas, gc, LINE_CHART_HORIZONTAL_BEGIN_POS, i, LINE_CHART_REAL_WIDTH + LINE_CHART_HORIZONTAL_BEGIN_POS, i);
+    }
+
+    color.red = 0;
+    color.green = 65535;
+    color.blue = 0;
+    gdk_gc_set_rgb_fg_color(gc, &color);
+
+    for (int i = 0; i < ARRAY_SIZE - 1; i++) {
+        if (mem_usage_percent_array[i] == 0 || mem_usage_percent_array[i + 1] == 0) {
+            break;
+        }
+        else {
+            gdk_draw_line(canvas, gc,
+                          LINE_CHART_HORIZONTAL_BEGIN_POS + LINE_CHART_DOT_STEP * i, (int)((1 - mem_usage_percent_array[i] / 100) * LINE_CHART_REAL_HEIGHT),
+                          LINE_CHART_HORIZONTAL_BEGIN_POS + LINE_CHART_DOT_STEP * (i + 1), (int)((1 - mem_usage_percent_array[i + 1] / 100) * LINE_CHART_REAL_HEIGHT)
+            );
+        }
+    }
+
+    color.red = 0;
+    color.green = 0;
+    color.blue = 0;
+    gdk_gc_set_rgb_fg_color(gc, &color);
+
+    return G_SOURCE_CONTINUE;
+}
+
+void add_cpu_usage_into_array(double usage) {
+    bool all_none_zero = true;
+    for (int i = 0; i < ARRAY_SIZE ; i++) {
+        if (cpu_usage_percent_array[i] == 0.0) {
+            cpu_usage_percent_array[i] = usage;
+            all_none_zero = false;
+            break;
+        }
+    }
+    if (all_none_zero) {
+        for (int i = 0; i < ARRAY_SIZE - 1; i++)
+            cpu_usage_percent_array[i] = cpu_usage_percent_array[i + 1];
+        cpu_usage_percent_array[ARRAY_SIZE - 1] = usage;
+    }
+}
+
+void add_mem_usage_into_array(double usage) {
+    bool all_none_zero = true;
+    for (int i = 0; i < ARRAY_SIZE ; i++) {
+        if (mem_usage_percent_array[i] == 0.0) {
+            mem_usage_percent_array[i] = usage;
+            all_none_zero = false;
+            break;
+        }
+    }
+    if (all_none_zero) {
+        for (int i = 0; i < ARRAY_SIZE - 1; i++)
+            mem_usage_percent_array[i] = mem_usage_percent_array[i + 1];
+        mem_usage_percent_array[ARRAY_SIZE - 1] = usage;
+    }
+}
+
+void debug_print_cpu_array(void) {
+    for (int i = 0; i < ARRAY_SIZE ; i++) {
+        if (cpu_usage_percent_array[i] == 0.0)
+            break;
+        printf("%.2lf ", cpu_usage_percent_array[i]);
+    }
+    putchar('\n');
+}
+
+void init_cpu_array(void) {
+    for (int i = 0; i < ARRAY_SIZE ; i++) {
+        cpu_usage_percent_array[i] = 0.0;
+        mem_usage_percent_array[i] = 0.0;
+    }
 }
