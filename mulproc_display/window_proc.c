@@ -34,6 +34,7 @@ void wind_proc(int argc, char *argv[], int rank) {
     // main window
     GtkWidget *window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
 
+    // window no.1 is a huge window
     if (rank != 1)
         gtk_widget_set_size_request(window, WINDOW_WIDTH, WINDOW_HEIGHT);
     else
@@ -50,7 +51,6 @@ void wind_proc(int argc, char *argv[], int rank) {
     GtkWidget *button_box = gtk_hbox_new(FALSE, 0);
 
     GtkWidget *label = gtk_label_new(title);
-
 
     gtk_box_pack_start(GTK_BOX(vbox), GTK_WIDGET(button_box), FALSE, FALSE, 0);
     gtk_box_pack_start(GTK_BOX(vbox), GTK_WIDGET(label), FALSE, FALSE, 0);

@@ -6,6 +6,22 @@
 
 #IncludeRegexTransform: 
 
+/home/vinstarry/projects/osdesign/mulproc_display/main.c
+stdio.h
+-
+unistd.h
+-
+sys/types.h
+-
+sys/wait.h
+-
+window_proc.h
+/home/vinstarry/projects/osdesign/mulproc_display/window_proc.h
+
+/home/vinstarry/projects/osdesign/mulproc_display/table_op.c
+table_op.h
+/home/vinstarry/projects/osdesign/mulproc_display/table_op.h
+
 /home/vinstarry/projects/osdesign/mulproc_display/table_op.h
 gtk/gtk.h
 -
