@@ -2,7 +2,7 @@
 // Created by vinstarry on 2/11/19.
 //
 
-#include "functions.h"
+#include "sys_page.h"
 
 #define WINDOW_WIDTH 1200
 #define WINDOW_HIGHT 800

@@ -70,22 +70,9 @@ CMakeFiles/proc_analysis.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/proc_analysis.dir/main.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/vinstarry/projects/osdesign/proc_analysis/main.c -o CMakeFiles/proc_analysis.dir/main.c.s
 
-CMakeFiles/proc_analysis.dir/functions.c.o: CMakeFiles/proc_analysis.dir/flags.make
-CMakeFiles/proc_analysis.dir/functions.c.o: ../functions.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vinstarry/projects/osdesign/proc_analysis/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/proc_analysis.dir/functions.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/proc_analysis.dir/functions.c.o   -c /home/vinstarry/projects/osdesign/proc_analysis/functions.c
-
-CMakeFiles/proc_analysis.dir/functions.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/proc_analysis.dir/functions.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/vinstarry/projects/osdesign/proc_analysis/functions.c > CMakeFiles/proc_analysis.dir/functions.c.i
-
-CMakeFiles/proc_analysis.dir/functions.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/proc_analysis.dir/functions.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/vinstarry/projects/osdesign/proc_analysis/functions.c -o CMakeFiles/proc_analysis.dir/functions.c.s
-
 CMakeFiles/proc_analysis.dir/mem_page.c.o: CMakeFiles/proc_analysis.dir/flags.make
 CMakeFiles/proc_analysis.dir/mem_page.c.o: ../mem_page.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vinstarry/projects/osdesign/proc_analysis/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/proc_analysis.dir/mem_page.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vinstarry/projects/osdesign/proc_analysis/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/proc_analysis.dir/mem_page.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/proc_analysis.dir/mem_page.c.o   -c /home/vinstarry/projects/osdesign/proc_analysis/mem_page.c
 
 CMakeFiles/proc_analysis.dir/mem_page.c.i: cmake_force
@@ -98,7 +85,7 @@ CMakeFiles/proc_analysis.dir/mem_page.c.s: cmake_force
 
 CMakeFiles/proc_analysis.dir/ps_page.c.o: CMakeFiles/proc_analysis.dir/flags.make
 CMakeFiles/proc_analysis.dir/ps_page.c.o: ../ps_page.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vinstarry/projects/osdesign/proc_analysis/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/proc_analysis.dir/ps_page.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vinstarry/projects/osdesign/proc_analysis/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/proc_analysis.dir/ps_page.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/proc_analysis.dir/ps_page.c.o   -c /home/vinstarry/projects/osdesign/proc_analysis/ps_page.c
 
 CMakeFiles/proc_analysis.dir/ps_page.c.i: cmake_force
@@ -109,20 +96,33 @@ CMakeFiles/proc_analysis.dir/ps_page.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/proc_analysis.dir/ps_page.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/vinstarry/projects/osdesign/proc_analysis/ps_page.c -o CMakeFiles/proc_analysis.dir/ps_page.c.s
 
+CMakeFiles/proc_analysis.dir/sys_page.c.o: CMakeFiles/proc_analysis.dir/flags.make
+CMakeFiles/proc_analysis.dir/sys_page.c.o: ../sys_page.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vinstarry/projects/osdesign/proc_analysis/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/proc_analysis.dir/sys_page.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/proc_analysis.dir/sys_page.c.o   -c /home/vinstarry/projects/osdesign/proc_analysis/sys_page.c
+
+CMakeFiles/proc_analysis.dir/sys_page.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/proc_analysis.dir/sys_page.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/vinstarry/projects/osdesign/proc_analysis/sys_page.c > CMakeFiles/proc_analysis.dir/sys_page.c.i
+
+CMakeFiles/proc_analysis.dir/sys_page.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/proc_analysis.dir/sys_page.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/vinstarry/projects/osdesign/proc_analysis/sys_page.c -o CMakeFiles/proc_analysis.dir/sys_page.c.s
+
 # Object files for target proc_analysis
 proc_analysis_OBJECTS = \
 "CMakeFiles/proc_analysis.dir/main.c.o" \
-"CMakeFiles/proc_analysis.dir/functions.c.o" \
 "CMakeFiles/proc_analysis.dir/mem_page.c.o" \
-"CMakeFiles/proc_analysis.dir/ps_page.c.o"
+"CMakeFiles/proc_analysis.dir/ps_page.c.o" \
+"CMakeFiles/proc_analysis.dir/sys_page.c.o"
 
 # External object files for target proc_analysis
 proc_analysis_EXTERNAL_OBJECTS =
 
 proc_analysis: CMakeFiles/proc_analysis.dir/main.c.o
-proc_analysis: CMakeFiles/proc_analysis.dir/functions.c.o
 proc_analysis: CMakeFiles/proc_analysis.dir/mem_page.c.o
 proc_analysis: CMakeFiles/proc_analysis.dir/ps_page.c.o
+proc_analysis: CMakeFiles/proc_analysis.dir/sys_page.c.o
 proc_analysis: CMakeFiles/proc_analysis.dir/build.make
 proc_analysis: CMakeFiles/proc_analysis.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/vinstarry/projects/osdesign/proc_analysis/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable proc_analysis"

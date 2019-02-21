@@ -2,8 +2,8 @@
 // Created by vinstarry on 2/11/19.
 //
 
-#ifndef PROC_ANALYSIS_FUNCTIONS_H
-#define PROC_ANALYSIS_FUNCTIONS_H
+#ifndef PROC_ANALYSIS_SYS_PAGE_H
+#define PROC_ANALYSIS_SYS_PAGE_H
 
 #include <gtk/gtk.h>
 #include <stdio.h>
@@ -24,4 +24,4 @@ char *get_uptime(int rank);
 char *get_total_memory(void);
 char *get_hostname(void);
 
-#endif //PROC_ANALYSIS_FUNCTIONS_H
+#endif //PROC_ANALYSIS_SYS_PAGE_H

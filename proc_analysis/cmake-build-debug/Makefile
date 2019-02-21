@@ -123,33 +123,6 @@ proc_analysis/fast:
 	$(MAKE) -f CMakeFiles/proc_analysis.dir/build.make CMakeFiles/proc_analysis.dir/build
 .PHONY : proc_analysis/fast
 
-functions.o: functions.c.o
-
-.PHONY : functions.o
-
-# target to build an object file
-functions.c.o:
-	$(MAKE) -f CMakeFiles/proc_analysis.dir/build.make CMakeFiles/proc_analysis.dir/functions.c.o
-.PHONY : functions.c.o
-
-functions.i: functions.c.i
-
-.PHONY : functions.i
-
-# target to preprocess a source file
-functions.c.i:
-	$(MAKE) -f CMakeFiles/proc_analysis.dir/build.make CMakeFiles/proc_analysis.dir/functions.c.i
-.PHONY : functions.c.i
-
-functions.s: functions.c.s
-
-.PHONY : functions.s
-
-# target to generate assembly for a file
-functions.c.s:
-	$(MAKE) -f CMakeFiles/proc_analysis.dir/build.make CMakeFiles/proc_analysis.dir/functions.c.s
-.PHONY : functions.c.s
-
 main.o: main.c.o
 
 .PHONY : main.o
@@ -231,6 +204,33 @@ ps_page.c.s:
 	$(MAKE) -f CMakeFiles/proc_analysis.dir/build.make CMakeFiles/proc_analysis.dir/ps_page.c.s
 .PHONY : ps_page.c.s
 
+sys_page.o: sys_page.c.o
+
+.PHONY : sys_page.o
+
+# target to build an object file
+sys_page.c.o:
+	$(MAKE) -f CMakeFiles/proc_analysis.dir/build.make CMakeFiles/proc_analysis.dir/sys_page.c.o
+.PHONY : sys_page.c.o
+
+sys_page.i: sys_page.c.i
+
+.PHONY : sys_page.i
+
+# target to preprocess a source file
+sys_page.c.i:
+	$(MAKE) -f CMakeFiles/proc_analysis.dir/build.make CMakeFiles/proc_analysis.dir/sys_page.c.i
+.PHONY : sys_page.c.i
+
+sys_page.s: sys_page.c.s
+
+.PHONY : sys_page.s
+
+# target to generate assembly for a file
+sys_page.c.s:
+	$(MAKE) -f CMakeFiles/proc_analysis.dir/build.make CMakeFiles/proc_analysis.dir/sys_page.c.s
+.PHONY : sys_page.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -240,9 +240,6 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... proc_analysis"
 	@echo "... edit_cache"
-	@echo "... functions.o"
-	@echo "... functions.i"
-	@echo "... functions.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
@@ -252,6 +249,9 @@ help:
 	@echo "... ps_page.o"
 	@echo "... ps_page.i"
 	@echo "... ps_page.s"
+	@echo "... sys_page.o"
+	@echo "... sys_page.i"
+	@echo "... sys_page.s"
 .PHONY : help
 
 

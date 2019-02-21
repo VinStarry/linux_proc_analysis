@@ -106,12 +106,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/vinstarry/projects/osdesign/proc_analysis/functions.c">
-			<Option target="proc_analysis"/>
-		</Unit>
-		<Unit filename="/home/vinstarry/projects/osdesign/proc_analysis/functions.h">
-			<Option target="proc_analysis"/>
-		</Unit>
 		<Unit filename="/home/vinstarry/projects/osdesign/proc_analysis/main.c">
 			<Option target="proc_analysis"/>
 		</Unit>
@@ -125,6 +119,12 @@
 			<Option target="proc_analysis"/>
 		</Unit>
 		<Unit filename="/home/vinstarry/projects/osdesign/proc_analysis/ps_page.h">
+			<Option target="proc_analysis"/>
+		</Unit>
+		<Unit filename="/home/vinstarry/projects/osdesign/proc_analysis/sys_page.c">
+			<Option target="proc_analysis"/>
+		</Unit>
+		<Unit filename="/home/vinstarry/projects/osdesign/proc_analysis/sys_page.h">
 			<Option target="proc_analysis"/>
 		</Unit>
 		<Unit filename="/home/vinstarry/projects/osdesign/proc_analysis/CMakeLists.txt">

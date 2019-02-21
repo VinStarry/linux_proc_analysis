@@ -4,10 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/vinstarry/projects/osdesign/proc_analysis/functions.c" "/home/vinstarry/projects/osdesign/proc_analysis/cmake-build-debug/CMakeFiles/proc_analysis.dir/functions.c.o"
   "/home/vinstarry/projects/osdesign/proc_analysis/main.c" "/home/vinstarry/projects/osdesign/proc_analysis/cmake-build-debug/CMakeFiles/proc_analysis.dir/main.c.o"
   "/home/vinstarry/projects/osdesign/proc_analysis/mem_page.c" "/home/vinstarry/projects/osdesign/proc_analysis/cmake-build-debug/CMakeFiles/proc_analysis.dir/mem_page.c.o"
   "/home/vinstarry/projects/osdesign/proc_analysis/ps_page.c" "/home/vinstarry/projects/osdesign/proc_analysis/cmake-build-debug/CMakeFiles/proc_analysis.dir/ps_page.c.o"
+  "/home/vinstarry/projects/osdesign/proc_analysis/sys_page.c" "/home/vinstarry/projects/osdesign/proc_analysis/cmake-build-debug/CMakeFiles/proc_analysis.dir/sys_page.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

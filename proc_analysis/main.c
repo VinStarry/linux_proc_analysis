@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <gtk/gtk.h>
-#include "functions.h"
+#include "sys_page.h"
 #include "mem_page.h"
 #include "ps_page.h"
 
