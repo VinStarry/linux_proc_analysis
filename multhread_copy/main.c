@@ -38,58 +38,73 @@ enum ERR_NUM {SUCCEED = 0,
         SET_SEM_VALUE_ERROR,
         };
 
+/* get the name of the file, stripe the path */
 char *get_file_name(char *filepath);
+/* copy file from src to dst */
 int copy_file(char *src_file_name, char *dst_file_name);
+/* return error number */
 void error_catch(int rstate);
+/* thread1: read from src */
 void *reader_function(void *read_fp);
+/* thread2: write to dst */
 void *writer_function(void *writer_fp);
+/* semaphore P operation */
 bool  semaphore_P(unsigned short sum_num);
+/* semaphore V operation */
 bool  semaphore_V(unsigned short sum_num);
+/* set initial value for semaphore */
 bool  set_value_semaphore(void);
+/* delete semaphore set */
 void  delete_semaphore(void);
+/* get shared buffer linked list */
 shared_buffer *malloc_circular_list(int size);
+/* remove shared buffer linked list */
 shared_buffer *free_circular_list(shared_buffer *target, int size);
 
 int main(int argc, char *argv[]) {
-    int return_state = 0;
-    char *src = NULL;
-    char *dst = NULL;
-    char *opt = NULL;
+    int return_state = 0;   // return val, used to catch error
+    char *src = NULL;       // src file name
+    char *dst = NULL;       // dst file name(directory)
     char *filename = NULL;
     struct stat s_buf;
-    if (argc != 3) {
+    if (argc != 3) {    // 3 argument is required
         perror("Invalid input!");
     }
     else {
         src = argv[1];
         dst = argv[2];
         stat(src, &s_buf);
-        if (S_ISDIR(s_buf.st_mode)) {
+        if (S_ISDIR(s_buf.st_mode)) {   // src cannot be a directory (do not support recursive copy)
             printf("%s is a directory\n", src);
             return_state = SRC_FILE_IS_DIR;
         }
         else {
             stat(dst, &s_buf);
-            if (S_ISDIR(s_buf.st_mode)) {
-                filename = get_file_name(src);
+            if (S_ISDIR(s_buf.st_mode)) {   // dst should be a directory
+                filename = get_file_name(src);  // stripe the filename of the source file
 //                printf("file name is %s\n", filename);
-                if (dst[strlen(dst) - 1] != '/')
+                if (dst[strlen(dst) - 1] != '/')    // add left dash if needed
                     dst = strcat(dst, "/");
-                char *dest_name = strcat(dst,filename);
+                char *dest_name = strcat(dst,filename); // get destination file name
 //                printf("destination file name is %s\n", dest_name);
-                copy_file(src, dest_name);
+                copy_file(src, dest_name);  // finally, copy file
             }
-            else {
+            else {  // dst is not a directory
                 printf("%s is not a directory\n", dst);
                 return_state = DST_FILE_IS_NOT_DIR;
             }
         }
     }
-
+    /* error catch and display */
     error_catch(return_state);
     return return_state;
 }
 
+/*
+ * stripe path to filename
+ * e.g: filepath is /tmp/hello/abc
+ * result: return "abc"
+ */
 char *get_file_name(char *filepath) {
     char *filename = NULL;
     size_t len = strlen(filepath);
@@ -108,6 +123,11 @@ char *get_file_name(char *filepath) {
     return filename;
 }
 
+/*
+ * copy source file to destination
+ * use two threads and shared buffer
+ * use semaphore to syn threads
+ */
 int copy_file(char *src_file_name, char *dst_file_name) {
     printf("Copy %s to %s.\n", src_file_name, dst_file_name);
     FILE *src = fopen(src_file_name, "rb");

@@ -33,8 +33,6 @@ stdio.h
 -
 gtk/gtk.h
 -
-cairo/cairo.h
--
 functions.h
 /home/vinstarry/projects/osdesign/proc_analysis/functions.h
 mem_page.h

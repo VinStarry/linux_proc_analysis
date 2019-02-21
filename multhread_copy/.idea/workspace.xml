@@ -12,7 +12,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f54f1367-cb8b-4023-9e92-66ad23311b5c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proc_analysis/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../proc_analysis/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proc_analysis/cmake-build-debug/CMakeFiles/proc_analysis.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/../proc_analysis/cmake-build-debug/CMakeFiles/proc_analysis.dir/C.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proc_analysis/cmake-build-debug/CMakeFiles/proc_analysis.dir/main.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/../proc_analysis/cmake-build-debug/CMakeFiles/proc_analysis.dir/main.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proc_analysis/cmake-build-debug/proc_analysis" beforeDir="false" afterPath="$PROJECT_DIR$/../proc_analysis/cmake-build-debug/proc_analysis" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,8 +40,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5295">
-              <caret line="287" column="14" selection-start-line="287" selection-start-column="14" selection-end-line="287" selection-end-column="14" />
+            <state relative-caret-position="1260">
+              <caret line="119" lean-forward="true" selection-start-line="119" selection-end-line="119" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -128,11 +132,12 @@
       <workItem from="1549375264080" duration="21000" />
       <workItem from="1549705484432" duration="92000" />
       <workItem from="1549902986384" duration="23000" />
+      <workItem from="1550722534004" duration="1158000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15515000" />
+    <option name="totallyTimeSpent" value="16673000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -145,8 +150,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="34" width="2560" height="1566" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18925421" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19165999" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -157,7 +163,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32977968" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.29850745" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.29815865" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="CMake" order="11" />
@@ -202,8 +208,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5295">
-          <caret line="287" column="14" selection-start-line="287" selection-start-column="14" selection-end-line="287" selection-end-column="14" />
+        <state relative-caret-position="1260">
+          <caret line="119" lean-forward="true" selection-start-line="119" selection-end-line="119" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
