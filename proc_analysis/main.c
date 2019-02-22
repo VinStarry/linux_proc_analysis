@@ -8,6 +8,7 @@
 #define WINDOW_HIGHT 1200
 #define LINE_CHART_WIDTH 1500
 #define LINE_CHART_HEIGHT 160
+#define ROW_NUMBER_MAX 400
 
 gboolean destroy_handle(GtkWidget *self, GdkEvent *event, gpointer data);
 void switch_page_handle(GtkNotebook *notebook, gpointer page, guint page_num, gpointer data);
@@ -83,10 +84,55 @@ int main(int argc, char *argv[]) {
     g_timeout_add(1000, update_mem_usage, mem_usage);
     g_signal_connect(G_OBJECT(mem_usage_drawing_area), "expose_event", G_CALLBACK(usage_mem_draw), NULL);
 
-    GtkWidget *proc_frame = get_proc_info();
+    GtkWidget *ps_frame_title = gtk_label_new("");
+//    GtkWidget *proc_frame =  get_proc_info();
+    GtkWidget *proc_frame = gtk_frame_new("");
+    gtk_label_set_markup(
+            GTK_LABEL(ps_frame_title),
+            "<span foreground='brown' font_desc='24'>Process information</span>");
+    gtk_frame_set_label_widget(GTK_FRAME(proc_frame), ps_frame_title);
+    gtk_container_set_border_width(GTK_CONTAINER(proc_frame), 20);
+
+    GtkWidget *table = gtk_table_new(ROW_NUMBER_MAX, 7, false);
+    GtkWidget *tbscrolled = gtk_scrolled_window_new(NULL,NULL);
+    gtk_container_add(GTK_CONTAINER(proc_frame),tbscrolled);
+    gtk_scrolled_window_set_policy(GTK_SCROLLED_WINDOW(tbscrolled), GTK_POLICY_AUTOMATIC, GTK_POLICY_ALWAYS);
+
+    gtk_scrolled_window_add_with_viewport (
+            GTK_SCROLLED_WINDOW (tbscrolled), table);
+
+    GtkWidget *pid_button = gtk_button_new_with_label("PID"),
+              *user_button = gtk_button_new_with_label("USER"),
+              *mem_per_button = gtk_button_new_with_label("%MEM"),
+              *cpu_per_button = gtk_button_new_with_label("%CPU"),
+              *vsz_button = gtk_button_new_with_label("VSZ"),
+              *rss_button = gtk_button_new_with_label("RSS"),
+              *state_button = gtk_button_new_with_label("STATE"),
+              *cmdline_button = gtk_button_new_with_label("COMMAND");
+
+    gtk_table_attach(GTK_TABLE(table), pid_button, 0, 1, (guint)0, (guint)1, GTK_EXPAND, GTK_EXPAND, 0, 0);
+    gtk_table_attach(GTK_TABLE(table), user_button, 1, 2, (guint)0, (guint)1, GTK_EXPAND, GTK_EXPAND, 0, 0);
+    gtk_table_attach(GTK_TABLE(table), mem_per_button, 2, 3, (guint)0, (guint)1, GTK_EXPAND, GTK_EXPAND, 0, 0);
+    gtk_table_attach(GTK_TABLE(table), cpu_per_button, 3, 4, (guint)0, (guint)1, GTK_EXPAND, GTK_EXPAND, 0, 0);
+    gtk_table_attach(GTK_TABLE(table), vsz_button, 4, 5, (guint)0, (guint)1, GTK_EXPAND, GTK_EXPAND, 0, 0);
+    gtk_table_attach(GTK_TABLE(table), rss_button, 5, 6, (guint)0, (guint)1, GTK_EXPAND, GTK_EXPAND, 0, 0);
+    gtk_table_attach(GTK_TABLE(table), state_button, 6, 7, (guint)0, (guint)1, GTK_EXPAND, GTK_EXPAND, 0, 0);
+    gtk_table_attach(GTK_TABLE(table), cmdline_button, 7, 8, (guint)0, (guint)1, GTK_EXPAND, GTK_EXPAND, 0, 0);
+
+    init_proc_table(table);
+
     gtk_container_add(GTK_CONTAINER(second_vbox), proc_frame);
 
+    g_signal_connect(G_OBJECT(pid_button), "pressed", G_CALLBACK(sort_by_pid), NULL);
+    g_signal_connect(G_OBJECT(user_button), "pressed", G_CALLBACK(sort_by_user), NULL);
+    g_signal_connect(G_OBJECT(mem_per_button), "pressed", G_CALLBACK(sort_by_memper), NULL);
+    g_signal_connect(G_OBJECT(cpu_per_button), "pressed", G_CALLBACK(sort_by_cpuper), NULL);
+    g_signal_connect(G_OBJECT(vsz_button), "pressed", G_CALLBACK(sort_by_vsz), NULL);
+    g_signal_connect(G_OBJECT(rss_button), "pressed", G_CALLBACK(sort_by_rss), NULL);
+
     gtk_notebook_append_page(GTK_NOTEBOOK(notebook), second_vbox, label);
+
+    g_timeout_add(5000, update_proc_table, table);
 
     // page three
     label = gtk_label_new("Memory");
@@ -131,6 +177,7 @@ int main(int argc, char *argv[]) {
 }
 
 gboolean destroy_handle(GtkWidget *self, GdkEvent *event, gpointer data) {
+    free_mps();
     endSignal = true;
     gtk_main_quit();
     return FALSE;

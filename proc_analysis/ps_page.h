@@ -17,6 +17,8 @@
 #include <pwd.h>
 
 typedef struct ps_info {
+    double cpu_usage;
+    double mem_usage;
     char pname[20];
     char user[20];
     int  pid;
@@ -58,9 +60,21 @@ gboolean usage_cpu_draw(GtkWidget *widget,GdkEventExpose *event,gpointer data);
 gboolean usage_mem_draw(GtkWidget *widget,GdkEventExpose *event,gpointer data);
 gboolean fresh_cpu_record(GtkWidget *widget);
 gboolean fresh_mem_record(GtkWidget *widget);
+gboolean update_proc_table(gpointer table);
 void add_cpu_usage_into_array(double usage);
 void add_mem_usage_into_array(double usage);
 void debug_print_cpu_array(void);
 void init_cpu_array(void);
+void init_proc_table(GtkWidget *table);
+void free_mps(void);
+long get_up_time(void);
+void get_system_config(void);
+gboolean sort_by_pid(GtkWidget *widget,GdkEventExpose *event,gpointer data);
+gboolean sort_by_user(GtkWidget *widget,GdkEventExpose *event,gpointer data);
+gboolean sort_by_memper(GtkWidget *widget,GdkEventExpose *event,gpointer data);
+gboolean sort_by_cpuper(GtkWidget *widget,GdkEventExpose *event,gpointer data);
+gboolean sort_by_rss(GtkWidget *widget,GdkEventExpose *event,gpointer data);
+gboolean sort_by_vsz(GtkWidget *widget,GdkEventExpose *event,gpointer data);
+void struct_sort(int col_num, int rows);
 
 #endif //PROC_ANALYSIS_PS_PAGE_H
