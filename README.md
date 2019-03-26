@@ -67,7 +67,8 @@ System模块的界面如下：
 
 对于每个进程的利用率，用以下方法进行计算：
 
-**部分内容参考了https://blog.csdn.net/tuzhutuzhu/article/details/18844321，侵权必删**
+**部分内容参考了https://blog.csdn.net/tuzhutuzhu/article/details/18844321**
+**侵权必删**
 
 1. 计算指定进程的`cpu`使用率
 
