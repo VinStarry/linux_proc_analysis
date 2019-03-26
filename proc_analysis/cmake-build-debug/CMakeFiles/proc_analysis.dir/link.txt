@@ -1,1 +1,0 @@
-/usr/bin/cc -g   CMakeFiles/proc_analysis.dir/main.c.o CMakeFiles/proc_analysis.dir/mem_page.c.o CMakeFiles/proc_analysis.dir/ps_page.c.o CMakeFiles/proc_analysis.dir/sys_page.c.o  -o proc_analysis -lgtk-x11-2.0 -lgdk-x11-2.0 -lpangocairo-1.0 -latk-1.0 -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lpangoft2-1.0 -lpango-1.0 -lgobject-2.0 -lglib-2.0 -lfontconfig -lfreetype 
