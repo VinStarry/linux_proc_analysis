@@ -12,7 +12,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e489f0e-2f95-411e-86c9-49936f900b4b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../module_driver/.test.c.swp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module_driver/.cache.mk" beforeDir="false" afterPath="$PROJECT_DIR$/../module_driver/.cache.mk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module_driver/.tmp_versions/xyxdev.mod" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module_driver/.xyxdev.ko.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module_driver/.xyxdev.mod.o.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module_driver/.xyxdev.o.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module_driver/xyxdev.ko" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module_driver/xyxdev.mod.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module_driver/xyxdev.mod.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module_driver/xyxdev.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mulproc_display/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mulproc_display/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multhread_copy/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../multhread_copy/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -34,11 +44,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4290">
-              <caret line="130" column="41" selection-start-line="130" selection-start-column="41" selection-end-line="130" selection-end-column="41" />
+            <state relative-caret-position="33">
+              <caret line="12" column="73" selection-end-line="212" selection-end-column="1" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -49,37 +59,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ps_page.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="792">
-              <caret line="24" selection-start-line="24" selection-end-line="24" />
-              <folding>
-                <element signature="e#465#730#0" />
-                <element signature="e#732#1066#0" />
-                <element signature="e#1068#1888#0" />
-                <element signature="e#1890#3566#0" />
-                <element signature="e#3701#6089#0" />
-                <element signature="e#6090#6118#0" />
-                <element signature="e#6253#6475#0" />
-                <element signature="e#6477#6752#0" />
-                <element signature="e#6754#11029#0" />
-                <element signature="e#11031#12653#0" />
-                <element signature="e#12655#13569#0" />
-                <element signature="e#13571#13746#0" />
-                <element signature="e#16757#16841#0" />
-                <element signature="e#18683#18768#0" />
-                <element signature="e#16892#16979#0" />
-                <element signature="e#16972#17059#0" />
-                <element signature="e#16892#16976#0" />
-                <element signature="e#16978#17062#0" />
-                <element signature="e#13748#13923#0" />
-                <element signature="e#13925#15540#0" />
-                <element signature="e#15542#17151#0" />
-                <element signature="e#17153#17652#0" />
-                <element signature="e#17654#18153#0" />
-                <element signature="e#18155#18380#0" />
-                <element signature="e#18382#18545#0" />
-                <element signature="e#18547#18710#0" />
-                <element signature="e#22187#22218#0" />
-              </folding>
+            <state relative-caret-position="7634">
+              <caret line="1064" column="23" selection-start-line="1064" selection-start-column="23" selection-end-line="1064" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -87,8 +68,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ps_page.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+            <state relative-caret-position="132">
+              <caret line="4" column="31" lean-forward="true" selection-end-line="80" />
             </state>
           </provider>
         </entry>
@@ -96,8 +77,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mem_page.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2904">
-              <caret line="88" column="1" selection-start-line="88" selection-start-column="1" selection-end-line="88" selection-end-column="1" />
+            <state relative-caret-position="270">
+              <caret line="58" column="12" lean-forward="true" selection-start-line="58" selection-start-column="12" selection-end-line="58" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -105,17 +86,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mem_page.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+            <state relative-caret-position="99">
+              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+              <folding>
+                <element signature="e#110#130#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sys_page.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="534">
+              <caret line="277" column="10" lean-forward="true" selection-start-line="277" selection-start-column="10" selection-end-line="277" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -123,8 +107,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sys_page.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="99">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="66">
+              <caret line="2" column="2" lean-forward="true" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
               <folding>
                 <element signature="e#110#130#0" expanded="true" />
               </folding>
@@ -151,7 +135,13 @@
       <find>scro</find>
       <find>g_tim</find>
       <find>100</find>
+      <find>version</find>
+      <find>/proc</find>
+      <find>trav</find>
+      <find>/st</find>
       <find>cpu</find>
+      <find>cpu_usage</find>
+      <find>command</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -170,16 +160,16 @@
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/mem_page.c" />
         <option value="$PROJECT_DIR$/ps_page.h" />
-        <option value="$PROJECT_DIR$/ps_page.c" />
         <option value="$PROJECT_DIR$/main.c" />
+        <option value="$PROJECT_DIR$/ps_page.c" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="249" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="612" />
     <option name="y" value="76" />
-    <option name="width" value="1938" />
-    <option name="height" value="1321" />
+    <option name="width" value="1948" />
+    <option name="height" value="1329" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -252,11 +242,17 @@
       <workItem from="1550794101128" duration="545000" />
       <workItem from="1550795967628" duration="11013000" />
       <workItem from="1551074985449" duration="1438000" />
+      <workItem from="1551247812389" duration="547000" />
+      <workItem from="1551394383829" duration="77000" />
+      <workItem from="1551394728836" duration="1417000" />
+      <workItem from="1552913830272" duration="626000" />
+      <workItem from="1553081903510" duration="10536000" />
+      <workItem from="1553139710277" duration="161000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82108000" />
+    <option name="totallyTimeSpent" value="95472000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -269,8 +265,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="34" width="2560" height="1566" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21611868" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2329591" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -281,8 +278,8 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32977968" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.26718214" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49959904" weight="0.65292096" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.26652452" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49959904" weight="0.41648898" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50040096" side_tool="true" weight="0.32977968" />
       <window_info anchor="bottom" id="Version Control" order="11" weight="0.32977968" />
       <window_info anchor="bottom" id="CMake" order="12" weight="0.24307036" />
@@ -367,85 +364,59 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ps_page.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        <state relative-caret-position="7634">
+          <caret line="1064" column="23" selection-start-line="1064" selection-start-column="23" selection-end-line="1064" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="33">
+          <caret line="12" column="73" selection-end-line="212" selection-end-column="1" />
           <folding>
-            <element signature="e#465#730#0" />
-            <element signature="e#732#1066#0" />
-            <element signature="e#1068#1888#0" />
-            <element signature="e#1890#3566#0" />
-            <element signature="e#3701#6089#0" />
-            <element signature="e#6090#6118#0" />
-            <element signature="e#6253#6475#0" />
-            <element signature="e#6477#6752#0" />
-            <element signature="e#6754#11029#0" />
-            <element signature="e#11031#12653#0" />
-            <element signature="e#12655#13569#0" />
-            <element signature="e#13571#13746#0" />
-            <element signature="e#16757#16841#0" />
-            <element signature="e#18683#18768#0" />
-            <element signature="e#16892#16979#0" />
-            <element signature="e#16972#17059#0" />
-            <element signature="e#16892#16976#0" />
-            <element signature="e#16978#17062#0" />
-            <element signature="e#13748#13923#0" />
-            <element signature="e#13925#15540#0" />
-            <element signature="e#15542#17151#0" />
-            <element signature="e#17153#17652#0" />
-            <element signature="e#17654#18153#0" />
-            <element signature="e#18155#18380#0" />
-            <element signature="e#18382#18545#0" />
-            <element signature="e#18547#18710#0" />
-            <element signature="e#22187#22218#0" />
+            <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ps_page.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mem_page.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2904">
-          <caret line="88" column="1" selection-start-line="88" selection-start-column="1" selection-end-line="88" selection-end-column="1" />
+        <state relative-caret-position="132">
+          <caret line="4" column="31" lean-forward="true" selection-end-line="80" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mem_page.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sys_page.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sys_page.h">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="99">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
           <folding>
             <element signature="e#110#130#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.c">
+    <entry file="file://$PROJECT_DIR$/mem_page.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4290">
-          <caret line="130" column="41" selection-start-line="130" selection-start-column="41" selection-end-line="130" selection-end-column="41" />
+        <state relative-caret-position="270">
+          <caret line="58" column="12" lean-forward="true" selection-start-line="58" selection-start-column="12" selection-end-line="58" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sys_page.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="2" column="2" lean-forward="true" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#110#130#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sys_page.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="534">
+          <caret line="277" column="10" lean-forward="true" selection-start-line="277" selection-start-column="10" selection-end-line="277" selection-end-column="10" />
         </state>
       </provider>
     </entry>

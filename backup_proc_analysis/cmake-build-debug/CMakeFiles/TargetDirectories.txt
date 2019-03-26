@@ -1,3 +1,0 @@
-/home/vinstarry/projects/osdesign/proc_analysis/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/vinstarry/projects/osdesign/proc_analysis/cmake-build-debug/CMakeFiles/proc_analysis.dir
-/home/vinstarry/projects/osdesign/proc_analysis/cmake-build-debug/CMakeFiles/edit_cache.dir

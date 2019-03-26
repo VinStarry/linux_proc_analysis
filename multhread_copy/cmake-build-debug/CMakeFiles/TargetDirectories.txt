@@ -1,3 +1,0 @@
-/home/vinstarry/projects/osdesign/multhread_copy/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/vinstarry/projects/osdesign/multhread_copy/cmake-build-debug/CMakeFiles/design1_2.dir
-/home/vinstarry/projects/osdesign/multhread_copy/cmake-build-debug/CMakeFiles/edit_cache.dir

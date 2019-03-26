@@ -1,3 +1,0 @@
-/home/vinstarry/projects/osdesign/mulproc_display/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/vinstarry/projects/osdesign/mulproc_display/cmake-build-debug/CMakeFiles/mulproc_display.dir
-/home/vinstarry/projects/osdesign/mulproc_display/cmake-build-debug/CMakeFiles/edit_cache.dir

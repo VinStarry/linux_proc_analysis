@@ -1,4 +1,0 @@
-/home/vinstarry/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/183.4886.39/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/vinstarry/projects/osdesign/mulproc_display
--- Configuring done
--- Generating done
--- Build files have been written to: /home/vinstarry/projects/osdesign/mulproc_display/cmake-build-debug
